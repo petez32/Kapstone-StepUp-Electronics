@@ -80,7 +80,7 @@ How to purchase?
 
     -Paid with credit points ( can recieve x amount when signed up, and can add more credit points with credit card)
 
-    -imitate a credit card(demo), has functionality but doesnt require authorization.
+    -imitate a credit card(demo), has functionality but doesn't require authorization.
 
 How will users interact in our system?
 
@@ -121,7 +121,7 @@ Once Signed-in How will user navigate?
                             -Options to Delete Item
                             -Checkout
                                 -Subtract Items Cost credits from the amount of Users credits .
-                                    -If users have enough Credits they can purchase
+                                 -If users have enough Credits they can purchase
                                     If not create something that says "not enough credits"
                                         - Two Button Links: Can Purchase more credits, or revert back to shopping Cart
 
