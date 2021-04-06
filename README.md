@@ -68,3 +68,70 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+<!-- Dev plan
+Name: StepUp Electronics
+
+How many categories? 3-4
+
+    -Computers, Phones, Televisions
+
+How to purchase?
+
+    -Paid with credit points ( can recieve x amount when signed up, and can add more credit points with credit card)
+
+    -imitate a credit card(demo), has functionality but doesnt require authorization.
+
+How will users interact in our system?
+
+    -Sign-in Page
+        - Name of Company & logo: just has username and password, and a "If you are not an user, sign-up here" with a button.
+
+    -Sign-up Page
+        - will have username, password, email, first name,last name.
+
+Once Signed-in How will user navigate?
+
+    -Home Page
+
+        -Name of company & Logo
+
+        -Nav Bar
+            - Profile Page Link
+                -Profile Picture with upload button, change username, change password, change address.
+
+            -log out button
+                -Basically a button that logs out.
+
+            -Search Bar
+                - Search for items
+
+            -filter function
+                -filter by items
+
+            -Credit Points with clickable link (design team?)
+                -Shows how many credits user has and can send to a text filed to get more credit points.
+
+            - Shopping Cart
+                - Icon-Shopping Cart- Displays how many items
+                    - Clickable-Link that will send you to Cart Page
+                        -Shopping Cart Page with items displayed.
+                            -Options to Add Item
+                                -button will revert to home Page, where you can continue to shop.
+                            -Options to Delete Item
+                            -Checkout
+                                -Subtract Items Cost credits from the amount of Users credits .
+                                    -If users have enough Credits they can purchase
+                                    If not create something that says "not enough credits"
+                                        - Two Button Links: Can Purchase more credits, or revert back to shopping Cart
+
+        -Products Displaying
+            -Display Products with Clickable feature
+
+                -Picture, Name of Product, Amount
+                -Once clicked: Picture ,Description, Cost, Purchase Item
+
+
+    Things we Want To Do:
+        -Back button
+        -System Admins: Can delete Items, and Add Items -->
