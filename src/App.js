@@ -1,12 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
-import Signin from "./compontent/Signin"
-
+import Home from "./views/Home";
+import Signin from "./views/Signin";
+import Signup from "./views/Signup";
+import {Switch, Route} from "react-router-dom";
 function App() {
   return (
     <div className="App">
-      <Signin/>
-     
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route path="/signin" component={Signin}  />
+        <Route path="/signup" component={Signup}  />
+      </Switch>
     </div>
   );
 }

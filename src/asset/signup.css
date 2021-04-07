@@ -1,0 +1,19 @@
+#signup-form{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin: auto;
+}
+
+#signup-div{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#signup-form > * {
+	margin: 5px;
+    overflow: hidden;
+    border-radius: 10px;
+}
