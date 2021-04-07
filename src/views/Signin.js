@@ -2,15 +2,17 @@ import React, { useState } from "react";
 import "../asset/signin.css";
 import { TextField, Button } from "@material-ui/core";
 import { Link } from "react-router-dom";
+import {useStore, actions} from '../store/store'
 
 function Signin() {
+    const dispatch = useStore((state) => state.dispatch);
     const [userInput, setUserInput] = useState({ username: "", password: "" });
     const handleInput = (e) => {
         setUserInput(state => ({...state, [e.target.name]: e.target.value}));
     }
     const handleSubmit = () => {
         if (userInput.password.length < 6) {
-            console.log('password should be longer than 6 characters')
+            dispatch({type: actions.TOAST, payload: {message: 'password should be longer than 6 characters', statusCode: 400}});
         } else {
             console.log({username:userInput.username, password:userInput.password})
         }
