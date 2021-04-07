@@ -4,20 +4,22 @@ import { TextField, Button } from "@material-ui/core";
 import { Link } from "react-router-dom";
 
 function Signin() {
-    const [userInput, setUserInput] = useState({ userName: "", passWord: "" });
+    const [userInput, setUserInput] = useState({ username: "", password: "" });
     const handleInput = (e) => {
-        console.log(e.target.name, e.target.value)
-        if (e.target.name === 'passWord' && e.target.value.length < 6) {
+        setUserInput(state => ({...state, [e.target.name]: e.target.value}));
+    }
+    const handleSubmit = () => {
+        if (userInput.password.length < 6) {
             console.log('password should be longer than 6 characters')
         } else {
-            setUserInput(state => ({...state, [e.target.name]: e.target.value}));
+            console.log({username:userInput.username, password:userInput.password})
         }
     }
     return (
         <div id="signin-div">
             <form id="signin-form">
                 <TextField
-                    name="userName"
+                    name="username"
                     onChange={handleInput}
                     label="UserName"
                     variant="filled"
@@ -25,11 +27,11 @@ function Signin() {
                 <TextField
                     onChange={handleInput}
                     label="Password"
-                    name="passWord"
+                    name="password"
                     variant="filled"
                     type="password"
                 />
-                <Button variant="contained" color="primary">Submit</Button>
+                <Button onClick={handleSubmit} variant="contained" color="primary">Submit</Button>
                 <span>
                     Not a member <Link to="/signup">Sign Up</Link> for X amount of credits.
                 </span>
