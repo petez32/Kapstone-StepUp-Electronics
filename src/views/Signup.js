@@ -1,5 +1,6 @@
 import "../asset/signup.css"
 import { TextField, Button } from "@material-ui/core";
+import {Link} from "react-router-dom"
 
 function Signup() {
 	return (
@@ -13,6 +14,9 @@ function Signup() {
 				<Button variant="contained" color="primary">
 				Submit
 				</Button>
+				<span>
+        			Already a member? <Link to="/signin">Sign In</Link> 
+        		</span>
 			</form>
     	</div>
 	)
