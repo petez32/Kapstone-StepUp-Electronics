@@ -1,0 +1,17 @@
+#product-carousel {
+    height: 500px;
+    background-color: black;
+    position: relative;
+}
+#product-carousel img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.carousel-inner{
+    height: 100%;
+}
+.carousel-inner > div {
+    height: 100%;
+}
