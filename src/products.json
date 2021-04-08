@@ -1,39 +1,39 @@
 {
-    "products":[
-        {
-            "id":1,
-            "name":"Tv",
-            "credits":3000,
-            "type":"tech",
-            "image":"https://cdn.thewirecutter.com/wp-content/uploads/2019/11/blackfriday-tvdeals-lowres-2x1.jpg"
-        },
-        {
-            "id":2,
-            "name":"Computers",
-            "credits":1000,
-            "type":"tech",
-            "image":"https://graetnewsnetwork.com/wp-content/uploads/2018/02/corsair-one-1.jpg"
-        },
-        {
-            "id":3,
-            "name":"Iphone",
-            "credits":800,
-            "type":"tech",
-            "image":"https://img.phonandroid.com/2020/06/gamme-iphone-12-everythingapplepro.jpg"
-        },
-        {
-            "id":4,
-            "name":"Ipad",
-            "credits":900,
-            "type":"tech",
-            "image":"https://images.idgesg.net/images/article/2020/11/ipad-air-2020-hero01-100864845-large.jpg"
-        },
-        {
-            "id":5,
-            "name":"Laptop",
-            "credits":400,
-            "type":"tech",
-            "image": "https://valorantcompetitive.com/wp-content/uploads/2020/04/Best-laptops-for-Valorant-1.jpg"
-        }
-    ]
+  "products": [
+    {
+      "id": 1,
+      "name": "TELEVISIONS",
+      "credits": 3000,
+      "type": "tech",
+      "image": "https://cdn.thewirecutter.com/wp-content/uploads/2019/11/blackfriday-tvdeals-lowres-2x1.jpg"
+    },
+    {
+      "id": 2,
+      "name": "DESKTOP COMPUTERS",
+      "credits": 1000,
+      "type": "tech",
+      "image": "https://graetnewsnetwork.com/wp-content/uploads/2018/02/corsair-one-1.jpg"
+    },
+    {
+      "id": 3,
+      "name": "CELL PHONES",
+      "credits": 800,
+      "type": "tech",
+      "image": "https://img.phonandroid.com/2020/06/gamme-iphone-12-everythingapplepro.jpg"
+    },
+    {
+      "id": 4,
+      "name": "TABLETS",
+      "credits": 900,
+      "type": "tech",
+      "image": "https://images.idgesg.net/images/article/2020/11/ipad-air-2020-hero01-100864845-large.jpg"
+    },
+    {
+      "id": 5,
+      "name": "LAPTOPS",
+      "credits": 400,
+      "type": "tech",
+      "image": "https://valorantcompetitive.com/wp-content/uploads/2020/04/Best-laptops-for-Valorant-1.jpg"
+    }
+  ]
 }
