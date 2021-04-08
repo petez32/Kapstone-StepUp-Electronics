@@ -14,11 +14,12 @@
   margin-top: 10px;
 }
 .headerSearch {
+  justify-content: flex-end;
   display: flex;
   flex: 1;
 }
 .headerSearchInput {
-  margin-left: 340px;
+  margin-left: 20px;
   height: 30px;
   padding: 4px;
   width: 55%;

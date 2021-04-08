@@ -18,11 +18,11 @@
 }
 
 .carousel-caption {
-  margin: -50px !important;
+  margin: -50px 0 !important;
 }
 
 .carousel-indicators {
-  margin: -30px !important;
+  margin: -30px 0 !important;
 }
 
 .carousel-inner {
@@ -37,22 +37,17 @@
 .home {
   justify-content: center;
   max-width: 2000px;
-  width: 1800px;
   background-color: lightgrey;
 }
 .headerRow1 {
   display: flex;
   justify-content: space-evenly;
   z-index: 1;
-  margin-left: 5px;
-  margin-right: 5px;
 }
 .headerRow2 {
   display: flex;
   justify-content: space-evenly;
   z-index: 1;
-  margin-left: 5px;
-  margin-right: 5px;
 }
 .homeBackground {
   background-image: linear-gradient(rgb(162, 187, 196), lightgrey);
@@ -64,8 +59,6 @@
   margin-bottom: -175px;
 }
 .homeContainer {
-  justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
   max-width: 1500px;
 }
