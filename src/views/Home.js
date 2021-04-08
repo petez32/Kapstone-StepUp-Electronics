@@ -1,5 +1,5 @@
 import React from "react";
-import "../asset/Home.css";
+import "../asset/home.css";
 import { Carousel } from "react-bootstrap";
 import { products } from "../products.json";
 import Product from "../component/Product";
