@@ -3,7 +3,7 @@
     z-index: 500;
     width: 500px;
     height: 15vh;
-    left: 30vw;
+    left: 31vw;
     bottom: 17vh;
     border-radius: 10px;
     
@@ -38,6 +38,10 @@
     .toast-200 {
     background-color: #5dd45f;
     }
+
+    .toast-201 {
+      background-color: #5dd45f;
+      }
     
     .toast-1 {
     background-color: #72afd3;
