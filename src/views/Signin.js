@@ -12,7 +12,7 @@ function Signin() {
     }
     const handleSubmit = () => {
         if (userInput.password.length < 6) {
-            dispatch({type: actions.TOAST, payload: {message: 'password should be longer than 6 characters', statusCode: 400}});
+            dispatch({type: actions.TOAST, payload: {message: 'You|ve successfully signed in', statusCode: 201}});
         } else {
             console.log({username:userInput.username, password:userInput.password})
         }
