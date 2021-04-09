@@ -1,0 +1,90 @@
+.header {
+  position: sticky;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  top: 0px;
+  z-index: 100;
+}
+.headerLogo {
+  width: 200px;
+  object-fit: contain;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+.headerSearch {
+  justify-content: flex-end;
+  display: flex;
+  flex: 1;
+}
+.headerSearchInput {
+  margin-left: 20px;
+  height: 30px;
+  padding: 4px;
+  width: 55%;
+  align-items: center;
+}
+.headerSearchIcon {
+  padding: 6px;
+  width: 40px !important;
+  height: 36px !important;
+  background-color: lightblue;
+  align-content: center !important;
+}
+.headerNavbar {
+  display: flex;
+  justify-content: space-evenly;
+  margin-left: 20px;
+}
+.headerHome {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 18px;
+  font-weight: 750;
+}
+.headerProducts {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 18px;
+  font-weight: 750;
+}
+.headerProfile {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 18px;
+  font-weight: 750;
+}
+.headerSignin {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 18px;
+  font-weight: 750;
+}
+.headerSignup {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  margin-right: 15px;
+  font-size: 18px;
+  font-weight: 750;
+}
+.headerCart {
+  display: flex;
+  align-items: center;
+  height: 30px;
+}
+.headerCartCount {
+  margin-left: 3px;
+  margin-right: 40px;
+  font-weight: 750;
+  font-size: 18px;
+}

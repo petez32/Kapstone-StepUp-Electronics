@@ -74,37 +74,66 @@ Name: StepUp Electronics
 
 How many categories? 3-4
 
-    -Computers, Phones, Televisions
+    -Computers, Phones, Televisions, Tablets
 
 How to purchase?
-
-    -Paid with credit points ( can recieve x amount when signed up, and can add more credit points with credit card)
+    -On home Page, and On Signin Page:
+        -Paid with credit points ( can recieve x amount when signed up, and can add more credit points with credit card)
 
     -imitate a credit card(demo), has functionality but doesn't require authorization.
 
 How will users interact in our system?
 
+    -Users can have immediate visual access but can not purchase items until Signing up, and then logging in.
+
     -Sign-in Page
-        - Name of Company & logo: just has username and password, and a "If you are not an user, sign-up here" with a button.
+        - Name of Company & logo: just has username and password, and a "If you are not an user, sign-up here" with a button"
+        -Signin Button
+        -toast if text-fields dont meet requirements
 
     -Sign-up Page
         - will have username, password, email, first name,last name.
+        -When you sign up user will get X amount of Credits
+        -Signup Button
+        -toast if text-fields dont meet requirements
 
 Once Signed-in How will user navigate?
 
     -Home Page
-
-        -Name of company & Logo
-
-        -Nav Bar
-            - Profile Page Link
-                -Profile Picture with upload button, change username, change password, change address.
-
-            -log out button
-                -Basically a button that logs out.
+        -Header
+            -Name of company & Logo
 
             -Search Bar
                 - Search for items
+
+            -Nav Bar
+                -Home
+
+                -All Products
+
+                - Profile
+                    -Profile Picture with upload button, change username, change password, change address.
+
+                    -Settings features
+
+                -Sign-in
+
+                -Sign-up
+
+                -log out button
+                    -Basically a button that logs out.
+
+                -Shopping Cart
+                    -logo
+                    -Number of Items in Cart
+
+         -Home
+
+                -Carousel
+
+                -Rows of products
+
+
 
             -filter function
                 -filter by items
