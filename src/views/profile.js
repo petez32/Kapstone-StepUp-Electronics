@@ -9,12 +9,6 @@ function profile(props) {
     <div>
       <img src="" alt="profile" />
       <input type="file" />
-      <label>Username</label>
-      <input name="username" />
-      <label>Password</label>
-      <input name="password" />
-      <label>Address</label>
-      <input name="address" />
       <button>Upload</button>
     </div>
   );
