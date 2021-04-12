@@ -14,22 +14,22 @@
   margin-top: 10px;
 }
 .headerSearch {
+  justify-content: flex-end;
   display: flex;
   flex: 1;
 }
 .headerSearchInput {
-  margin-left: 340px;
+  margin-left: 10px;
   height: 30px;
   padding: 4px;
-  width: 55%;
-  align-items: center;
+  width: 65%;
 }
 .headerSearchIcon {
-  padding: 6px;
+  padding: 4px;
   width: 40px !important;
   height: 36px !important;
-  background-color: lightblue;
-  align-content: center !important;
+  background-color: rgb(122, 167, 184) !important;
+  margin-top: -3px;
 }
 .headerNavbar {
   display: flex;
@@ -43,15 +43,9 @@
   margin-right: 10px;
   font-size: 18px;
   font-weight: 750;
+  color: black;
 }
-.headerProducts {
-  display: flex;
-  flex-direction: column;
-  margin-left: 10px;
-  margin-right: 10px;
-  font-size: 18px;
-  font-weight: 750;
-}
+
 .headerProfile {
   display: flex;
   flex-direction: column;
@@ -59,6 +53,7 @@
   margin-right: 10px;
   font-size: 18px;
   font-weight: 750;
+  color: black;
 }
 .headerSignin {
   display: flex;
@@ -67,6 +62,7 @@
   margin-right: 10px;
   font-size: 18px;
   font-weight: 750;
+  color: black;
 }
 .headerSignup {
   display: flex;
@@ -75,12 +71,18 @@
   margin-right: 15px;
   font-size: 18px;
   font-weight: 750;
+  color: black;
 }
 .headerCart {
   display: flex;
   align-items: center;
   height: 30px;
 }
+
+.MuiSvgIcon-root {
+  color: black !important;
+}
+
 .headerCartCount {
   margin-left: 3px;
   margin-right: 40px;

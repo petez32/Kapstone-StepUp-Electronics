@@ -1,19 +1,35 @@
-#signin-form{
-    display: flex;
-    flex-direction: column;
-    width: 400px;
-    margin: auto;
+#signin-form {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  margin: auto;
+  border: 1px solid darkgray;
+  background-color: white;
 }
 
-#signin-div{
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#signin-div {
+  max-height: 100%;
+  height: 92%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightgray;
 }
 
 #signin-form > * {
-	margin: 5px;
-    overflow: hidden;
-    border-radius: 10px;
+  margin: 15px;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.MuiButton-containedPrimary {
+  background-color: rgb(122, 167, 184) !important;
+}
+
+.MuiButton-root {
+  font-size: 1.25rem !important;
+}
+
+.h1 {
+  font-weight: 2000;
 }
