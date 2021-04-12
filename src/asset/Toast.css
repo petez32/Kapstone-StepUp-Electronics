@@ -1,55 +1,55 @@
 .custom-toast {
-    position: absolute;
-    z-index: 500;
-    width: 500px;
-    height: 15vh;
-    left: 31vw;
-    bottom: 17vh;
-    border-radius: 10px;
-    
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    justify-content: center;
-    
-    background-color: #080a07e5;
-    opacity: 0;
-    visibility: hidden;
-    
-    transition: opacity 1000ms, background-color 1000ms, visibility 1000ms;
-    }
-    
-    .toast p {
-    font-size: 3vh;
-    text-align: center;
-    }
-    
-    .toast-show {
-    opacity: 1;
-    visibility: visible;
-    background-color: #ffffff; /* default color */
-    transition: opacity 1000ms, background-color, 1000ms, visibility 0ms;
-    }
-    
-  /* make custom colors for other error codes here */
-    .toast-400 {
-    background-color: #f03630;
-    }
-    .toast-200 {
-    background-color: #5dd45f;
-    }
+  position: absolute;
+  z-index: 500;
+  width: 500px;
+  height: 15vh;
+  left: 37.8vw;
+  bottom: 19vh;
+  border-radius: 10px;
 
-    .toast-201 {
-      background-color: #5dd45f;
-      }
-    
-    .toast-1 {
-    background-color: #72afd3;
-    }
-    
-    .toast-2 {
-    background-color: #d18451;
-    } 
-    .toast-413 {
-    background-color: brown;
-    }
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #080a07e5;
+  opacity: 0;
+  visibility: hidden;
+
+  transition: opacity 1000ms, background-color 1000ms, visibility 1000ms;
+}
+
+.toast p {
+  font-size: 3vh;
+  text-align: center;
+}
+
+.toast-show {
+  opacity: 1;
+  visibility: visible;
+  background-color: #ffffff; /* default color */
+  transition: opacity 1000ms, background-color, 1000ms, visibility 0ms;
+}
+
+/* make custom colors for other error codes here */
+.toast-400 {
+  background-color: #f03630;
+}
+.toast-200 {
+  background-color: #5dd45f;
+}
+
+.toast-201 {
+  background-color: #5dd45f;
+}
+
+.toast-1 {
+  background-color: #72afd3;
+}
+
+.toast-2 {
+  background-color: #d18451;
+}
+.toast-413 {
+  background-color: brown;
+}
