@@ -3,7 +3,7 @@
     z-index: 500;
     width: 500px;
     height: 15vh;
-    left: 31vw;
+    left: 20vw;
     bottom: 17vh;
     border-radius: 10px;
     
@@ -12,7 +12,7 @@
     align-items: center;
     justify-content: center;
     
-    background-color: #080a07e5;
+    background-color: rgba(0,0,0,0);
     opacity: 0;
     visibility: hidden;
     
@@ -33,15 +33,11 @@
     
   /* make custom colors for other error codes here */
     .toast-400 {
-    background-color: #f03630;
+    background-color: #f35752;
     }
     .toast-200 {
     background-color: #5dd45f;
     }
-
-    .toast-201 {
-      background-color: #5dd45f;
-      }
     
     .toast-1 {
     background-color: #72afd3;

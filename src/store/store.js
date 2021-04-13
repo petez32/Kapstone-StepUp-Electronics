@@ -16,7 +16,7 @@ export const actions = {
 export const toastFor = (action, successMessage, successCode = 0) => ({
     message: action.payload?.message || successMessage,
     statusCode: action.payload?.statusCode || successCode
-  });
+});
 
 const reducer = (state, action) => {
     switch (action.type) {
