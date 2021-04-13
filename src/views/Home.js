@@ -1,9 +1,5 @@
 import React from "react";
-<<<<<<< HEAD
 import "../asset/home.css";
-=======
-
->>>>>>> 5895b42db6c13badbb179bcc18fb8fd86513dbba
 import { Carousel } from "react-bootstrap";
 import { products } from "../products.json";
 import Product from "../component/Product";
