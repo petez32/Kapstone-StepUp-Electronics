@@ -4,6 +4,12 @@ import React from "react";
 // change username,
 // change password, change address.
 
+
+
+
+
+
+
 function profile(props) {
   return (
     <div>
