@@ -6,7 +6,7 @@ import Signin from "./views/Signin";
 import Signup from "./views/Signup";
 import Profile from "./views/profile";
 import { useStore } from "./store/store"
-import AllProduct from "./views/AllProduct";
+import AllProducts from "./views/AllProducts";
 import { Switch, Route } from "react-router-dom";
 import Header from "./component/Header.js";
 import "./asset/home.css";
