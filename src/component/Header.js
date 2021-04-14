@@ -18,24 +18,20 @@ function Header() {
         <Link to="/">
           <div className="headerHome">Home</div>
         </Link>
-
-        {/* <Link to="/AllProduct">
+        {/* <Link to="/AllProducts">
           <div className="headerProducts">Products</div>
-        </Link> */}
+        </Link>
+        } */}
         <DropDown />
-
         <Link to="/Profile">
           <div className="headerProfile">Profile</div>
         </Link>
-
         <Link to="/Signin">
           <div className="headerSignin">Sign-In</div>
         </Link>
-
         <Link to="/Signup">
           <div className="headerSignup">Sign-Up</div>
         </Link>
-
         <div className="headerCart">
           <Link to="/ShoppingCart">
             <ShoppingCartIcon fontSize="large" />
