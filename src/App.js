@@ -19,10 +19,7 @@ function App() {
       <Toast />
       <Switch>
         <Route exact path="/" component={Home} />
-        (!user.token){<Route path="/signin" component={Signin} />}
-        {user.token &&<div>
-          {user.userName}
-          </div>}
+        <Route path="/signin" component={Signin} />
         <Route path="/signup" component={Signup} />
         <Route path="/AllProducts" component={AllProducts} />
         <Route path="/profile" component={Profile} />
