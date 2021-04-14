@@ -1,3 +1,7 @@
+export const All_Products = () => {
+  return fetch("http://localhost:5000/products").then((response) => response.json());
+};
+
 export const signInRequest = (userName, password)=>{
 return fetch( "http://localhost:5000/login",{
         method: "POST",
