@@ -3,10 +3,14 @@ import "../asset/Header.css";
 import Logo from "../asset/StepUp_Electronics.png";
 import SearchIcon from "@material-ui/icons/Search";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
+import Signin from "../component/Signin";
+import { useStore} from "../store/store";
 import { Link } from "react-router-dom";
 import DropDown from "../component/AllProductsDropDown.js";
 
+
 function Header() {
+  const user = useStore((state) => state.user)
   return (
     <div className="header">
       <img className="headerLogo" src={Logo} alt="company logo" />
@@ -26,12 +30,18 @@ function Header() {
         <Link to="/Profile">
           <div className="headerProfile">Profile</div>
         </Link>
-        <Link to="/Signin">
+        { !user.token &&<Link to="/Signin">
           <div className="headerSignin">Sign-In</div>
         </Link>
+        }
+        {user.token &&<div>
+          {user.userName}
+          </div>}
+          { !user.token &&
         <Link to="/Signup">
           <div className="headerSignup">Sign-Up</div>
-        </Link>
+        </Link>}
+
         <div className="headerCart">
           <Link to="/ShoppingCart">
             <ShoppingCartIcon fontSize="large" />

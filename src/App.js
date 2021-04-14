@@ -5,12 +5,14 @@ import Home from "./views/Home";
 import Signin from "./views/Signin";
 import Signup from "./views/Signup";
 import Profile from "./views/profile";
+import { useStore } from "./store/store"
 import AllProducts from "./views/AllProducts";
 import { Switch, Route } from "react-router-dom";
 import Header from "./component/Header.js";
 import "./asset/home.css";
 
 function App() {
+  const user = useStore((state) => state.user)
   return (
     <div className="App">
       <Header />
