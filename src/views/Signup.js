@@ -2,6 +2,7 @@ import "../asset/signup.css";
 import React, { useState } from "react";
 import { TextField, Button } from "@material-ui/core";
 import { Link } from "react-router-dom";
+import { signUpRequest } from "../FetchRequests";
 import { useStore, actions } from "../store/store";
 
 function Signup() {
@@ -25,20 +26,21 @@ function Signup() {
         type: actions.TOAST,
         payload: { message: "All fields must be completed", statusCode: 400 },
       });
-    } else if (userInput.password.length < 6) {
+    } else if (userInput.password.length < 4) {
       dispatch({
         type: actions.TOAST,
         payload: {
-          message: "password should be longer than 6 characters",
+          message: "password should be longer than 2 characters",
           statusCode: 400,
         },
       });
     } else {
-      console.log(userInput);
       dispatch({
         type: actions.TOAST,
         payload: { message: "Created account successfully", statusCode: 201 },
       });
+      signUpRequest(userInput.username, userInput.password, userInput.email,
+        userInput.firstName, userInput.lastName)
     }
   };
 
@@ -88,9 +90,11 @@ function Signup() {
           label="Last Name"
           variant="filled"
         />
+        <Link to="/signin" >
         <Button onClick={handleSubmit} variant="contained" color="primary">
           Submit
         </Button>
+        </Link>
         <span>
           <center>
             Already a member? <Link to="/signin">Sign In</Link>
