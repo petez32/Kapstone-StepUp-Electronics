@@ -24,7 +24,7 @@ function App() {
           {user.userName}
           </div>}
         <Route path="/signup" component={Signup} />
-        <Route path="/AllProduct" component={AllProduct} />
+        <Route path="/AllProducts" component={AllProducts} />
         <Route path="/profile" component={Profile} />
       </Switch>
     </div>

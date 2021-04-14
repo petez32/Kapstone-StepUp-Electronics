@@ -22,12 +22,11 @@ function Header() {
         <Link to="/">
           <div className="headerHome">Home</div>
         </Link>
-
-        {/* <Link to="/AllProduct">
+        {/* <Link to="/AllProducts">
           <div className="headerProducts">Products</div>
-        </Link> */}
+        </Link>
+        } */}
         <DropDown />
-
         <Link to="/Profile">
           <div className="headerProfile">Profile</div>
         </Link>
