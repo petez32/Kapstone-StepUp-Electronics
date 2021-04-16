@@ -1,9 +1,32 @@
 import React from "react";
 
-// Profile-Profile Picture with upload button,
-// change username,
-// change password, change address.
 
+
+
+// change username,
+function Username(){
+
+}
+
+
+// change password. 
+
+
+
+//change address.
+
+
+
+// Add user 
+
+
+// Delete User
+
+
+
+
+
+// Profile-Profile Picture with upload button,
 function profile(props) {
   return (
     <div>
@@ -13,6 +36,5 @@ function profile(props) {
     </div>
   );
 }
-
 
 export default profile;
