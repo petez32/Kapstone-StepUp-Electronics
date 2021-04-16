@@ -1,17 +1,21 @@
-import React from "react";
-import { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 import { All_Products } from "../FetchRequests";
 
-function AllProducts(props) {
+function Tablet() {
   const [products, setProducts] = useState([]);
+  const [tablets, setTablets] = useState([]);
 
   useEffect(() => {
     All_Products().then((data) => setProducts(data));
-  }, []);
 
+    const TabletsCategory = products.filter((products) => {
+      return products.category === "tablet";
+    });
+    setTablets(TabletsCategory);
+  }, [tablets, products]);
   return (
     <div>
-      {products.map((item) => (
+      {tablets.map((item) => (
         <div>
           <img src={item.imageUrl} alt="" />
           <>
@@ -23,4 +27,5 @@ function AllProducts(props) {
     </div>
   );
 }
-export default AllProducts;
+
+export default Tablet;
