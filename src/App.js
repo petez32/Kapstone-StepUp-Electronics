@@ -12,6 +12,7 @@ import Header from "./component/Header.js";
 import "./asset/home.css";
 import CellPhone from "./views/phones";
 import Television from "./views/Televisions";
+import Tablet from "./views/Tablets";
 
 function App() {
   //const user = useStore((state) => state.user);
@@ -27,6 +28,7 @@ function App() {
         <Route path="/products/phones" component={CellPhone} />
         <Route path="/profile" component={Profile} />
         <Route path="/products/Televisions" component={Television} />
+        <Route path="/products/Tablets" component={Tablet} />
       </Switch>
     </div>
   );

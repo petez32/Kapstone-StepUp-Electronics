@@ -28,7 +28,9 @@ function AllProductsDropDown() {
 
         <MenuItem onClick={handleClose}>DESKTOP COMPUTERS</MenuItem>
         <MenuItem onClick={handleClose}>LAPTOPS</MenuItem>
-        <MenuItem onClick={handleClose}>TABLETS</MenuItem>
+        <Link to="products/Tablets">
+          <MenuItem onClick={handleClose}>TABLETS</MenuItem>
+        </Link>
         <Link to="/products/Televisions">
           <MenuItem onClick={handleClose}>TELEVISIONS</MenuItem>
         </Link>
