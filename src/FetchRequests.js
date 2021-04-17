@@ -25,3 +25,4 @@ export const signUpRequest = (userName, password,email,firstName,lastName)=>{
             }),
         }).then((response) => response.json())
     };
+

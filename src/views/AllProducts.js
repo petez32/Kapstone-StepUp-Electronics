@@ -25,6 +25,7 @@ function AllProducts() {
           <>
             <h1> {item.productName} </h1>
             <p> {item.productDetail} </p>
+            
           </>
         </div>
       ))}

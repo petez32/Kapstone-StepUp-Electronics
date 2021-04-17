@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect,useState} from "react";
 import "../asset/Header.css";
 import Logo from "../asset/StepUp_Electronics.png";
 import SearchIcon from "@material-ui/icons/Search";
@@ -11,6 +11,22 @@ import DropDown from "../component/AllProductsDropDown.js";
 
 function Header() {
   const user = useStore((state) => state.user)
+  const [cart, setCart] = useState([])
+  
+  useEffect(()=>{
+    if(user.loaded === true){
+    
+   fetch("http://localhost:5000/cart/get/"+ user.id)
+   .then(res => res.json())
+   .then (data => setCart(data))
+
+      }
+ 
+    
+
+
+  },[user,cart])
+
   return (
     <div className="header">
       <img className="headerLogo" src={Logo} alt="company logo" />
@@ -41,13 +57,22 @@ function Header() {
         <Link to="/Signup">
           <div className="headerSignup">Sign-Up</div>
         </Link>}
-
+        
         <div className="headerCart">
-          <Link to="/ShoppingCart">
-            <ShoppingCartIcon fontSize="large" />
-          </Link>
-          <span className="headerCartCount">0</span>
-        </div>
+      
+        <Link to="/ShoppingCart">
+          <ShoppingCartIcon fontSize="large" />
+        </Link>
+      
+      
+        <span className="headerCartCount">{cart.length}</span>
+        
+        
+        
+      </div>
+        
+        
+
       </div>
     </div>
   );

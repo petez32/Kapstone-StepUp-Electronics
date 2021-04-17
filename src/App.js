@@ -9,7 +9,9 @@ import { useStore } from "./store/store"
 import AllProducts from "./views/AllProducts";
 import { Switch, Route } from "react-router-dom";
 import Header from "./component/Header.js";
+import MyCart from "./component/ShoppingCart";
 import "./asset/home.css";
+import { ShoppingCart } from "@material-ui/icons";
 
 function App() {
   const user = useStore((state) => state.user)
@@ -23,6 +25,7 @@ function App() {
         <Route path="/signup" component={Signup} />
         <Route path="/AllProducts" component={AllProducts} />
         <Route path="/profile" component={Profile} />
+        <Route path="/ShoppingCart" component={MyCart} />
       </Switch>
     </div>
   );
