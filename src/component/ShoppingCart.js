@@ -1,22 +1,45 @@
 import React,{useState, useEffect} from 'react'
 import {useStore} from "../store/store"
+import {Link} from "react-router-dom"
 
 const MyCart = () => {
     const user = useStore((state) => state.user)
     const [cart, setCart] = useState([])
+    const [currentUser, setCurrentUser]  = useState({})
     let sum = 0
 
     const DeleteItemFromCart = (event)=>{
         const id = event.target.id
-        fetch( "http://localhost:5000/cart/delete/" + id,{
+        fetch( "http://localhost:5000/users/delete/" + id,{
             method: "DELETE",
             headers:{"Content-Type":"application/json"}
         }).then((response) => response.json())
         .then(res =>console.log(res))
-        const CheckOut = ()=>{
-
-        }
+        
+       
     
+
+    }
+    // checkout 
+    const CheckOut = (event)=>{
+       const userId = event.target.id
+       fetch( "http://localhost:5000/cart/checkout/" + userId,{
+            method: "PATCH",
+            headers:{"Content-Type":"application/json"}
+        }).then((response) => response.json())
+        .then(res =>console.log(res))
+        const balance = user.credits - sum
+        // update credit
+        fetch( "http://localhost:5000/updateCredits/" + userId ,{
+            method: "PATCH",
+            headers:{"Content-Type":"application/json"},
+            body:JSON.stringify({
+                credits:balance
+          
+            }),
+        }).then((response) => response.json())
+        .then (response => console.log(response))
+
 
     }
   
@@ -26,6 +49,9 @@ const MyCart = () => {
      fetch("http://localhost:5000/cart/get/"+ user.id)
      .then(res => res.json())
      .then (data => setCart(data))
+     fetch("http://localhost:5000/user/"+ user.id)
+     .then(res => res.json())
+     .then (data => setCurrentUser(data))
   
         }
 
@@ -36,12 +62,16 @@ const MyCart = () => {
 
     // },[cart])
     if(cart.length === 0){
-        return <div>You have no items in the cart</div>
+        return(
+        <>
+        <div>Available Credit: <strong>{currentUser.credits}</strong></div>
+         <div>You have no items in the cart</div>
+         </>)
     }else {
     return (
        
         <>
-         <div>Availabe Credite : <strong>{user.credits}</strong> <button >add Credits</button></div>
+         <div>Availabe Credite : <strong>{currentUser.credits}</strong> <button >add Credits</button></div>
         
 
         <div>
@@ -68,8 +98,10 @@ const MyCart = () => {
             </tr>
           
          </table>
-         <div><button>Click To CheckOut</button></div>
-            
+         <div> 
+            <Link to ="/cart/checkout"><button onClick= {CheckOut} id = {user.id}>Click To CheckOut</button></Link> 
+            </div>
+             
         </div>
         </>
     )

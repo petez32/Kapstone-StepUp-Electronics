@@ -10,6 +10,8 @@ import AllProducts from "./views/AllProducts";
 import { Switch, Route } from "react-router-dom";
 import Header from "./component/Header.js";
 import MyCart from "./component/ShoppingCart";
+import CheckOut from "./component/CheckOut";
+import Order from "./component/Order";
 import "./asset/home.css";
 import { ShoppingCart } from "@material-ui/icons";
 
@@ -26,6 +28,8 @@ function App() {
         <Route path="/AllProducts" component={AllProducts} />
         <Route path="/profile" component={Profile} />
         <Route path="/ShoppingCart" component={MyCart} />
+        <Route path="/cart/checkout" component={CheckOut} />
+        <Route path="/user/order" component={Order} />
       </Switch>
     </div>
   );
