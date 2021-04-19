@@ -1,11 +1,9 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { All_Products, addToCart } from "../FetchRequests";
-
 import {useStore} from "../store/store"
 
-
-function AllProducts() {
+function AllProducts(props) {
   const [products, setProducts] = useState([]);
   const user = useStore((state) =>state.user)
   const addItemToCart = (event)=>{
@@ -25,16 +23,9 @@ function AllProducts() {
   }
 
   useEffect(() => {
-    //const fetchData = async () => {
     All_Products().then((data) => setProducts(data));
-
-    //setProducts(result.Products);
-    //console.log(products);
-    // };
-    // fetchData();
   }, []);
-  //console.log(products);
-  // render({
+
   return (
     <div>
       {products &&products.map((item) => (

@@ -18,28 +18,28 @@ function AllProductsDropDown() {
 
   return (
     <div className="dropDownButton">
-      <Button
-        aria-controls="simple-menu"
-        aria-haspopup="true"
-        onClick={handleClick}
-      >
+      <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
         Products
       </Button>
-      <Menu
-        id="simple-menu"
-        anchorEl={anchorEl}
-        keepMounted
-        open={Boolean(anchorEl)}
-        onClose={handleClose}
-      >
+      <Menu id="simple-menu" anchorEl={anchorEl} keepMounted open={Boolean(anchorEl)} onClose={handleClose}>
         <Link to="/AllProducts">
           <MenuItem onClick={handleClose}>ALL PRODUCTS</MenuItem>
         </Link>
-        <MenuItem onClick={handleClose}>DESKTOP COMPUTERS</MenuItem>
-        <MenuItem onClick={handleClose}>LAPTOPS</MenuItem>
-        <MenuItem onClick={handleClose}>TABLETS</MenuItem>
-        <MenuItem onClick={handleClose}>TELEVISIONS</MenuItem>
-        <MenuItem onClick={handleClose}>CELL PHONES</MenuItem>
+        <Link to="/products/Desktops">
+          <MenuItem onClick={handleClose}>DESKTOP COMPUTERS</MenuItem>
+        </Link>
+        <Link to="/products/Laptops">
+          <MenuItem onClick={handleClose}>LAPTOPS</MenuItem>
+        </Link>
+        <Link to="products/Tablets">
+          <MenuItem onClick={handleClose}>TABLETS</MenuItem>
+        </Link>
+        <Link to="/products/Televisions">
+          <MenuItem onClick={handleClose}>TELEVISIONS</MenuItem>
+        </Link>
+        <Link to="/products/phones">
+          <MenuItem onClick={handleClose}>CELL PHONES</MenuItem>
+        </Link>
       </Menu>
     </div>
   );
