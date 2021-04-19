@@ -27,12 +27,14 @@ const MyCart = () => {
     // checkout 
     const CheckOut = (event)=>{
        
-        if(user.credits < sum){
+        if(currentUser.credits < sum){
+            alert("you dont have enough credits please add more credits")
             event.preventDefault()
-            alert("you dont have enough credits")
+            
             return false
           
         }else {
+         
      
        const userId = event.target.id
        fetch( "http://localhost:5000/cart/checkout/" + userId,{
@@ -40,7 +42,7 @@ const MyCart = () => {
             headers:{"Content-Type":"application/json"}
         }).then((response) => response.json())
         .then(res =>console.log(res))
-        const balance = user.credits - sum
+        const balance = currentUser.credits - sum
         // update credit
         fetch( "http://localhost:5000/updateCredits/" + userId ,{
             method: "PATCH",
@@ -66,13 +68,11 @@ const MyCart = () => {
      .then(res => res.json())
      .then (data => setCurrentUser(data))
   
+  
         }
-        // if(checkedOut=== true){
-        //      setLink( "/cart/checkout")
-        // }
-        // else {
-        //       setLink("/ShoppingCart")
-        // }
+        
+        
+        
 
   
     },[user,cart])
