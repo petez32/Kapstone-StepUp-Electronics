@@ -1,10 +1,28 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import { All_Products } from "../FetchRequests";
-import { render } from "react-dom";
+import { All_Products, addToCart } from "../FetchRequests";
+
+import {useStore} from "../store/store"
+
 
 function AllProducts() {
   const [products, setProducts] = useState([]);
+  const user = useStore((state) =>state.user)
+  const addItemToCart = (event)=>{
+    const productId = (event.target.id)
+    const itemToAdd = products.filter(product =>{
+      return product._id === productId
+    })
+    const item = itemToAdd[0]
+    
+    const productName = item.productName
+    const price = item.price
+    const productDetail = item.productDetail
+    const userId = user.id
+  addToCart(  userId,productName,price, productDetail).
+  then(res => console.log(res))
+
+  }
 
   useEffect(() => {
     //const fetchData = async () => {
@@ -19,12 +37,20 @@ function AllProducts() {
   // render({
   return (
     <div>
-      {products.map((item) => (
+      {products &&products.map((item) => (
         <div>
           <img src={item.imageUrl} alt="" />
           <>
             <h1> {item.productName} </h1>
             <p> {item.productDetail} </p>
+            <p> {item.price} </p>
+            {user.token &&
+            <div> <button
+            onClick = {addItemToCart}
+            id = {item._id}
+              >Add To Cart</button></div>
+             }
+
             
           </>
         </div>

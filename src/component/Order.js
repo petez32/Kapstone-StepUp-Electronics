@@ -24,6 +24,8 @@ const Order = () => {
                     <>
                     <div> <strong>Product Name:</strong>{item.productName}</div>
                     <div> <strrong>procuct detail :</strrong>{item.productDetail}</div>
+                    <div> <strrong>Price:</strrong>{item.price}</div>
+                 
                     </>
                 )
             })}
@@ -34,3 +36,4 @@ const Order = () => {
 }
 
 export default Order
+ 

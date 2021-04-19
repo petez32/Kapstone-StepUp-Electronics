@@ -7,10 +7,14 @@ const MyCart = () => {
     const [cart, setCart] = useState([])
     const [currentUser, setCurrentUser]  = useState({})
     let sum = 0
+    // const[checkedOut, setCheckedOut] = useState(false)
+    // const[link, setLink] = useState("")
+    
 
+// delete from cart
     const DeleteItemFromCart = (event)=>{
         const id = event.target.id
-        fetch( "http://localhost:5000/users/delete/" + id,{
+        fetch( "http://localhost:5000/cart/delete/" + id,{
             method: "DELETE",
             headers:{"Content-Type":"application/json"}
         }).then((response) => response.json())
@@ -22,6 +26,14 @@ const MyCart = () => {
     }
     // checkout 
     const CheckOut = (event)=>{
+       
+        if(user.credits < sum){
+            event.preventDefault()
+            alert("you dont have enough credits")
+            return false
+          
+        }else {
+     
        const userId = event.target.id
        fetch( "http://localhost:5000/cart/checkout/" + userId,{
             method: "PATCH",
@@ -42,7 +54,8 @@ const MyCart = () => {
 
 
     }
-  
+}
+
     useEffect(()=>{
       if(user.loaded === true){
       
@@ -54,6 +67,12 @@ const MyCart = () => {
      .then (data => setCurrentUser(data))
   
         }
+        // if(checkedOut=== true){
+        //      setLink( "/cart/checkout")
+        // }
+        // else {
+        //       setLink("/ShoppingCart")
+        // }
 
   
     },[user,cart])
@@ -99,7 +118,16 @@ const MyCart = () => {
           
          </table>
          <div> 
-            <Link to ="/cart/checkout"><button onClick= {CheckOut} id = {user.id}>Click To CheckOut</button></Link> 
+      
+           
+              <Link  to ="/cart/checkout"><button onClick= {CheckOut} id = {user.id}>Click To CheckOut</button></Link> 
+
+            
+    
+         
+            {/* {!checkedOut && <Link  to ="/ShoppingCart" ><button onClick= {CheckOut} id = {user.id}>Click To CheckOut</button></Link> } */}
+            
+            
             </div>
              
         </div>
