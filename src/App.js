@@ -13,7 +13,8 @@ import "./asset/home.css";
 import CellPhone from "./views/phones";
 import Television from "./views/Televisions";
 import Tablet from "./views/Tablets";
-
+import Desktop from "./views/Desktops";
+import Laptop from "./views/Laptops";
 function App() {
   //const user = useStore((state) => state.user);
   return (
@@ -29,6 +30,8 @@ function App() {
         <Route path="/profile" component={Profile} />
         <Route path="/products/Televisions" component={Television} />
         <Route path="/products/Tablets" component={Tablet} />
+        <Route path="/products/Desktops" component={Desktop} />
+        <Route path="/products/Laptops" component={Laptop} />
       </Switch>
     </div>
   );
