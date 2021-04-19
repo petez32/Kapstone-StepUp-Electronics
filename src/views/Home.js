@@ -3,7 +3,7 @@ import "../asset/home.css";
 import { Carousel } from "react-bootstrap";
 import { products } from "../products.json";
 import Product from "../component/Product";
-//import Product from "../";
+
 
 function Home() {
   return (
