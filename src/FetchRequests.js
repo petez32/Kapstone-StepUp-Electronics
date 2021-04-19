@@ -12,6 +12,7 @@ return fetch( "http://localhost:5000/login",{
         }),
     }).then((response) => response.json())
 };
+// signup user
 export const signUpRequest = (userName, password,email,firstName,lastName)=>{
     return fetch( "http://localhost:5000/users",{
             method: "POST",
@@ -25,3 +26,19 @@ export const signUpRequest = (userName, password,email,firstName,lastName)=>{
             }),
         }).then((response) => response.json())
     };
+    // add to cart
+    export const addToCart = (userId, productName, price, productDetail ) =>{
+        return fetch("http://localhost:5000/cart/add", {
+            method : "POST",
+            headers:{"Content-Type":"application/json"},
+            body:JSON.stringify({
+                userId,
+                productName,
+                price,
+                productDetail
+       
+            }),
+        }).then((response) => response.json())
+        
+    }
+
