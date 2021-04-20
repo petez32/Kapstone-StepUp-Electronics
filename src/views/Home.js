@@ -4,6 +4,7 @@ import { Carousel } from "react-bootstrap";
 import { products } from "../products.json";
 import Product from "../component/Product";
 
+
 function Home() {
   return (
     <div className="home">
