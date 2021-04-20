@@ -1,11 +1,7 @@
-<<<<<<< HEAD
-export const All_Products = () => { return fetch("http://localhost:5000/products").then((response) => response.json()); }; 
-=======
 export const All_Products = () => {
-  return fetch("http://localhost:5000/products").then((response) => response.json());
+return fetch("http://localhost:5000/products").then((response) => response.json());
 };
 
->>>>>>> 777235f666712539890043bb5810f470b4423740
 export const signInRequest = (userName, password)=>{
 return fetch( "http://localhost:5000/login",{
         method: "POST",
