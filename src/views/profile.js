@@ -35,7 +35,7 @@ function profile(props) {
       <Button>Change Address</Button>
       
       <h3>Recent purchases</h3>
-
+    {/* A change, delete later */}
 
       <h3>Recently Viewed</h3>
 
