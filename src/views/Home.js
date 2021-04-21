@@ -3,13 +3,11 @@ import "../asset/home.css";
 import { Carousel } from "react-bootstrap";
 import { products } from "../products.json";
 import Product from "../component/Product";
-import AllProducts from "./AllProducts";
 
 
 function Home() {
   return (
 
-    //<AllProducts/>
     <div className="home">
       <Carousel id="product-carousel">
         {products.map((item) => (
