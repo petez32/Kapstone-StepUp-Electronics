@@ -7,6 +7,7 @@ const Profile = () => {
   // call the user from the database
     const user = useStore((state) =>state.user)
     const [currentUser, setCurrentUser] = useState({})
+    //use effect
  
     useEffect(()=>{
       if(user.loaded === true){
