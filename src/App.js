@@ -20,7 +20,8 @@ import Tablet from "./views/Tablets";
 import Desktop from "./views/Desktops";
 import Laptop from "./views/Laptops";
 import AddCredits from "./component/addcredits";
-import Searching from "./component/search";
+
+
 
 function App() {
   //const user = useStore((state) => state.user);
@@ -42,7 +43,7 @@ function App() {
         <Route path="/products/Tablets" component={Tablet} />
         <Route path="/products/Desktops" component={Desktop} />
         <Route path="/products/Laptops" component={Laptop} />
-        <Route path="/search" component={Searching} />
+       
         
       </Switch>
     </div>

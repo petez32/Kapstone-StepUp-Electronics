@@ -1,18 +1,17 @@
-import React from "react";
+import React from 'react'
+import {useStore} from "../store/store"
 
-// Profile-Profile Picture with upload button,
-// change username,
-// change password, change address.
-
-function profile(props) {
-  return (
-    <div>
-      <img src="" alt="profile" />
-      <input type="file" />
-      <button>Upload</button>
-    </div>
-  );
+const Profile = () => {
+    const user = useStore((state) =>state.user)
+    return (
+        <>
+        <div>
+          <h1>{(user.userName).toUpperCase()}'s Profile</h1>
+            <div> First Name:</div><span>{user.firstName}</span>
+            
+        </div>
+        </>
+    )
 }
 
-
-export default profile;
+export default Profile

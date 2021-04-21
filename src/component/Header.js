@@ -33,9 +33,9 @@ function Header() {
       <img className="headerLogo" src={Logo} alt="company logo" />
       <div className="headerSearch">
         <input className="headerSearchInput" type="text" />
-        <Link to="/search">
+       
         <SearchIcon className="headerSearchIcon" />
-        </Link>
+       
       </div>
       <div className="headerNavbar">
         <Link to="/">
