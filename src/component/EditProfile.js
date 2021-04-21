@@ -4,6 +4,7 @@ import {Link} from "react-router-dom"
 
 
 const EditProfile = () => {
+    // et current user
     const user = useStore((state) => state.user)
     const [submitted, setSubmitted] = useState(false)
     const [currentUser, setCurrentUser] = useState({})
