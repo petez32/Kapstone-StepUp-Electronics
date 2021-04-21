@@ -46,8 +46,9 @@ function App() {
         <Route path="/products/Televisions" component={Television} />
         <Route path="/products/Tablets" component={Tablet} />
         <Route path="/products/Desktops" component={Desktop} />
-        <Route path="/products/Laptops" component={Laptop} />  
-      </Switch>
+        <Route path="/products/Laptops" component={Laptop} /> 
+        <Route path= "*" component={ErrorPage} /> 
+    </Switch>
       <ToastContainer closeButton={false} position="bottom-right" />
     </div>
   );
