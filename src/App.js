@@ -1,6 +1,5 @@
 import logo from "./logo.svg";
 import "./App.css";
-import Toast from "./views/Toast";
 import Home from "./views/Home";
 import Signin from "./views/Signin";
 import Signup from "./views/Signup";
@@ -19,13 +18,17 @@ import Television from "./views/Televisions";
 import Tablet from "./views/Tablets";
 import Desktop from "./views/Desktops";
 import Laptop from "./views/Laptops";
+import 'react-toastify/dist/ReactToastify.css';
+import { toast, ToastContainer } from "react-toastify";
 
 function App() {
-  //const user = useStore((state) => state.user);
+  toast.configure({
+    autoClose: 5000,
+    draggable: true,
+  });  //const user = useStore((state) => state.user);
   return (
     <div className="App">
       <Header />
-      <Toast />
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/signin" component={Signin} />
@@ -41,6 +44,7 @@ function App() {
         <Route path="/products/Desktops" component={Desktop} />
         <Route path="/products/Laptops" component={Laptop} />
       </Switch>
+      <ToastContainer closeButton={false} position="bottom-right" />
     </div>
   );
 }
