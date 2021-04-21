@@ -60,85 +60,83 @@ const MyCart = () => {
         .then((data) => setCurrentUser(data));
     }
   }, [user, cart]);
+  // useEffect(()=>{
+  //     DeleteItemFromCart()
 
+  // },[cart])
   if (cart.length === 0) {
     return (
-      <div className="availiableBackground">
-        <div className="availiableContainer">
-          <div className="availiableCredit">
-            Available Credit:
-            <strong> {currentUser.credits} Credits</strong>
-          </div>
-          <div className="noItems">You have no items in the cart</div>
+      <>
+        <div>
+          Available Credit: <strong>{currentUser.credits}</strong>
+          <Link to="/ShoppingCart/addCredits">Click to Add Credits</Link>
         </div>
-      </div>
+        <div>You have no items in the cart</div>
+        <p></p>
+        <p></p>
+        <div>
+          <Route path="/ShoppingCart/addCredits" component={AddCredits} />
+        </div>
+      </>
     );
   } else {
     return (
-      <div className="cartBackground">
-        <center>
-          <div className="shoppingCartContainer">
-            <h5 className="cartCredits">Availabe Credits:</h5>{" "}
-            <strong>{currentUser.credits}</strong>{" "}
-            <button className="cartAddCreditsButton">Add Credits</button>
-            <div>
+      <>
+        <div>
+          Availabe Credite : <strong>{currentUser.credits}</strong>
+          <Link to="ShoppingCart/addCredits">Click toAdd Creditd</Link>
+        </div>
+
+        <div>
+          <table>
+            <tr>
               {" "}
-              <th>
-                <h5>Product Name</h5>
-              </th>
-              <th>
-                <h5> Price</h5>
-              </th>
-              <div>
-                {cart &&
-                  cart.map((item) => {
-                    {
-                      sum = sum + item.price;
-                    }
-                    return (
-                      <tr>
-                        <td>{item.productName}</td>
-                        <td>{item.price} credits</td>
-                        <td>
-                          <button
-                            className="cartDeleteButton"
-                            onClick={DeleteItemFromCart}
-                            id={item._id}
-                          >
-                            Delete
-                          </button>
-                        </td>
-                      </tr>
-                    );
-                  })}
-                <tr>
-                  <td>
-                    <strong>Total</strong>
-                  </td>
-                  <td>
-                    <strong>{sum} credits</strong>{" "}
-                  </td>
-                </tr>
+              <td>Product Name</td>
+              <td> Price</td>
+              <td></td>
+            </tr>
+            {cart &&
+              cart.map((item) => {
+                {
+                  sum = sum + item.price;
+                }
+                return (
+                  <tr>
+                    <td>{item.productName}</td>
+                    <td>{item.price}</td>
+                    <td>
+                      <button onClick={DeleteItemFromCart} id={item._id}>
+                        Delete
+                      </button>
+                    </td>
+                  </tr>
+                );
+              })}
+            <tr>
+              <td>
+                <strong>Total</strong>
+              </td>
+              <td>
+                <strong>{sum}</strong>{" "}
+              </td>
+            </tr>
+          </table>
+          <div>
+            <Link to="/cart/checkout">
+              <button onClick={CheckOut} id={user.id}>
+                Click To CheckOut
+              </button>
+            </Link>
 
-                <Link to="/cart/checkout">
-                  <button
-                    className="checkoutButton"
-                    onClick={CheckOut}
-                    id={user.id}
-                  >
-                    Click To CheckOut
-                  </button>
-                </Link>
-
-                {/* {!checkedOut && <Link  to ="/ShoppingCart" ><button onClick= {CheckOut} id = {user.id}>Click To CheckOut</button></Link> } */}
-              </div>
-              {/* <p></p><p></p> */}
-              {/* <div> */}
-              <Route path="/ShoppingCart/addCredits" component={AddCredits} />
-            </div>
+            {/* {!checkedOut && <Link  to ="/ShoppingCart" ><button onClick= {CheckOut} id = {user.id}>Click To CheckOut</button></Link> } */}
           </div>
-        </center>
-      </div>
+        </div>
+        <p></p>
+        <p></p>
+        <div>
+          <Route path="/ShoppingCart/addCredits" component={AddCredits} />
+        </div>
+      </>
     );
   }
 };
