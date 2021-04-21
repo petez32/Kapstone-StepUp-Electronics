@@ -39,8 +39,13 @@ function Signup() {
         type: actions.TOAST,
         payload: { message: "Created account successfully", statusCode: 201 },
       });
-      signUpRequest(userInput.username, userInput.password, userInput.email,
-        userInput.firstName, userInput.lastName)
+      signUpRequest(
+        userInput.username,
+        userInput.password,
+        userInput.email,
+        userInput.firstName,
+        userInput.lastName
+      );
     }
   };
 
@@ -90,10 +95,12 @@ function Signup() {
           label="Last Name"
           variant="filled"
         />
-        <Link to="/signin" >
-        <Button onClick={handleSubmit} variant="contained" color="primary">
-          Submit
-        </Button>
+        <Link to="/signin">
+          <center>
+            <Button onClick={handleSubmit} variant="contained" color="primary">
+              Submit
+            </Button>
+          </center>
         </Link>
         <span>
           <center>

@@ -34,39 +34,46 @@ function Signin() {
         type: actions.TOAST,
         payload: { message: " Successfully logged in", statusCode: 201 },
       });
-      signInRequest(userInput.username, userInput.password)
-      .then((userData) => 
-      dispatch({type:actions.LOGIN,payload:userData}))
-    }};
-    return (
-        <div id="signin-div">
-            <form id="signin-form">
-              <div className="loginText">
-                <h1>Sign-In</h1>
-              </div>
-              <br />
-                <TextField
-                    name="username"
-                    onChange={handleInput}
-                    label="UserName"
-                    variant="filled"
-                />
-                <TextField
-                    onChange={handleInput}
-                    label="Password"
-                    name="password"
-                    variant="filled"
-                    type="password"
-                />
-                <Link to="/" >
-                <Button onClick={handleSubmit} variant="contained" color="primary">Submit</Button>
-                </Link>
-                <span> <center>
-                Not a member <Link to="/signup">Sign Up</Link> for X amount of credits.
-                </center>
-                </span>
-            </form>
+      signInRequest(userInput.username, userInput.password).then((userData) =>
+        dispatch({ type: actions.LOGIN, payload: userData })
+      );
+    }
+  };
+  return (
+    <div id="signin-div">
+      <form id="signin-form">
+        <div className="loginText">
+          <h1>Sign-In</h1>
         </div>
+        <br />
+        <TextField
+          name="username"
+          onChange={handleInput}
+          label="UserName"
+          variant="filled"
+        />
+        <TextField
+          onChange={handleInput}
+          label="Password"
+          name="password"
+          variant="filled"
+          type="password"
+        />
+        <Link to="/">
+          <center>
+            <Button onClick={handleSubmit} variant="contained" color="primary">
+              Submit
+            </Button>
+          </center>
+        </Link>
+        <span>
+          {" "}
+          <center>
+            Not a member <Link to="/signup">Sign Up</Link> for 50 bonus credits.
+          </center>
+        </span>
+      </form>
+    </div>
   );
 }
 

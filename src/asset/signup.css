@@ -1,7 +1,7 @@
 #signup-form {
   display: flex;
   flex-direction: column;
-  width: 500px;
+  width: 450px;
   margin: auto;
   border: 1px solid darkgray;
   background-color: white;
@@ -24,6 +24,8 @@
 
 .MuiButton-containedPrimary {
   background-color: rgb(122, 167, 184) !important;
+  justify-content: center;
+  width: 25%;
 }
 
 .h1 {

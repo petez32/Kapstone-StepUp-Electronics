@@ -73,6 +73,17 @@
   font-weight: 750;
   color: black;
 }
+
+.headerUser {
+  font-weight: 650;
+  margin-left: -5px;
+  margin-right: 25px;
+  margin-top: -2px;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: black !important;
+}
+
 .headerCart {
   display: flex;
   align-items: center;
