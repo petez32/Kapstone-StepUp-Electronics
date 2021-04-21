@@ -22,10 +22,7 @@ function Header() {
    fetch("http://localhost:5000/cart/get/"+ user.id)
    .then(res => res.json())
    .then (data => setCart(data))
-
       }
-
-
   },[user,cart])
 
   return (
