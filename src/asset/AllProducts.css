@@ -51,10 +51,8 @@
   position: absolute;
   bottom: 5px;
   left: 105px;
-  /* align-items: center; */
-  width: 30%;
-  /* padding: 2px;
-  margin-bottom: 25px;*/
+  width: 40%;
   background-image: linear-gradient(rgb(253, 142, 7), rgb(247, 196, 103));
   color: black;
+  border-radius: 2px;
 }

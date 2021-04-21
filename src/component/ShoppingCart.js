@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useStore } from "../store/store";
 import { Link, Route } from "react-router-dom";
 import AddCredits from "./addcredits";
+import "../asset/ShoppingCart.css";
 
 const MyCart = () => {
   const user = useStore((state) => state.user);
@@ -66,77 +67,90 @@ const MyCart = () => {
   // },[cart])
   if (cart.length === 0) {
     return (
-      <>
-        <div>
-          Available Credit: <strong>{currentUser.credits}</strong>
-          <Link to="/ShoppingCart/addCredits">Click to Add Credits</Link>
-        </div>
-        <div>You have no items in the cart</div>
-        <p></p>
-        <p></p>
-        <div>
-          <Route path="/ShoppingCart/addCredits" component={AddCredits} />
-        </div>
-      </>
+      <div className="availableBackground">
+        <center>
+          <div className="availableContainer">
+            <div className="availableCredit">
+              Available Credit: <strong>{currentUser.credits}</strong>
+            </div>
+            <div className="addCreditLink">
+              <Link to="/ShoppingCart/addCredits">Click to Add Credits</Link>
+            </div>
+            <div className="noItems">You have no items in the cart</div>
+            <Route path="/ShoppingCart/addCredits" component={AddCredits} />
+          </div>
+        </center>
+      </div>
     );
   } else {
     return (
-      <>
-        <div>
-          Availabe Credite : <strong>{currentUser.credits}</strong>
-          <Link to="ShoppingCart/addCredits">Click toAdd Creditd</Link>
-        </div>
-
-        <div>
-          <table>
-            <tr>
-              {" "}
-              <td>Product Name</td>
-              <td> Price</td>
-              <td></td>
-            </tr>
-            {cart &&
-              cart.map((item) => {
-                {
-                  sum = sum + item.price;
-                }
-                return (
-                  <tr>
-                    <td>{item.productName}</td>
-                    <td>{item.price}</td>
-                    <td>
-                      <button onClick={DeleteItemFromCart} id={item._id}>
-                        Delete
-                      </button>
-                    </td>
-                  </tr>
-                );
-              })}
-            <tr>
-              <td>
-                <strong>Total</strong>
-              </td>
-              <td>
-                <strong>{sum}</strong>{" "}
-              </td>
-            </tr>
-          </table>
-          <div>
-            <Link to="/cart/checkout">
-              <button onClick={CheckOut} id={user.id}>
-                Click To CheckOut
-              </button>
-            </Link>
-
-            {/* {!checkedOut && <Link  to ="/ShoppingCart" ><button onClick= {CheckOut} id = {user.id}>Click To CheckOut</button></Link> } */}
+      <div className="cartBackground">
+        <center>
+          <div className="shoppingCartContainer">
+            <h5 className="cartCredits">Available Credits:</h5>{" "}
+            <strong>{currentUser.credits}</strong>{" "}
+            <div className="clickAddCreditsLink">
+              <Link
+                to="ShoppingCart/addCredits"
+                className="clickAddCreditsLink"
+              >
+                Click To Add Credits
+              </Link>
+            </div>
+            {/* swapped button for link */}
           </div>
-        </div>
-        <p></p>
-        <p></p>
-        <div>
-          <Route path="/ShoppingCart/addCredits" component={AddCredits} />
-        </div>
-      </>
+
+          <div>
+            <table>
+              <tr>
+                {" "}
+                <td>Product Name</td>
+                <td> Price</td>
+                <td></td>
+              </tr>
+              {cart &&
+                cart.map((item) => {
+                  {
+                    sum = sum + item.price;
+                  }
+                  return (
+                    <tr>
+                      <td>{item.productName}</td>
+                      <td>{item.price}</td>
+                      <td>
+                        <button onClick={DeleteItemFromCart} id={item._id}>
+                          Delete
+                        </button>
+                      </td>
+                    </tr>
+                  );
+                })}
+              <tr>
+                <td>
+                  <strong>Total</strong>
+                </td>
+                <td>
+                  <strong>{sum}</strong>{" "}
+                </td>
+              </tr>
+            </table>
+            <div>
+              <Link to="/cart/checkout">
+                <button onClick={CheckOut} id={user.id}>
+                  Click To CheckOut
+                </button>
+              </Link>
+
+              {/* {!checkedOut && <Link  to ="/ShoppingCart" ><button onClick= {CheckOut} id = {user.id}>Click To CheckOut</button></Link> } */}
+            </div>
+          </div>
+          <p></p>
+          <p></p>
+          <div>
+            <Route path="/ShoppingCart/addCredits" component={AddCredits} />
+          </div>
+        </center>
+      </div>
     );
   }
 };

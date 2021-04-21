@@ -26,26 +26,29 @@ function Header() {
   return (
     <div className="header">
       <img className="headerLogo" src={Logo} alt="company logo" />
-      <div className="headerSearch">
+
+      {/* <div className="headerSearch">
         <input className="headerSearchInput" type="text" />
 
         <SearchIcon className="headerSearchIcon" />
-      </div>
+      </div> */}
       <div className="headerNavbar">
         <Link to="/">
           <div className="headerHome">Home</div>
         </Link>
 
         <DropDown />
-        <Link to="/Profile">
+        {/* <Link to="/Profile">
           <div className="headerProfile">Profile</div>
-        </Link>
+        </Link> */}
         {!user.token && (
           <Link to="/Signin">
             <div className="headerSignin">Sign-In</div>
           </Link>
         )}
-        {user.token && <div>{user.userName}</div>}
+        <Link to="/Profile">
+          {user.token && <div className="headerUser">{user.userName}</div>}
+        </Link>
         {!user.token && (
           <Link to="/Signup">
             <div className="headerSignup">Sign-Up</div>
@@ -61,7 +64,9 @@ function Header() {
 
               <div>
                 <Link to="/">
-                  <button onClick={logout}>Logout </button>
+                  <button className="logoutButton" onClick={logout}>
+                    Logout{" "}
+                  </button>
                 </Link>
               </div>
             </>
