@@ -20,6 +20,7 @@ import Desktop from "./views/Desktops";
 import Laptop from "./views/Laptops";
 import 'react-toastify/dist/ReactToastify.css';
 import { toast, ToastContainer } from "react-toastify";
+import ErrorPage from "./component/notFound"
 
 function App() {
   toast.configure({
@@ -43,6 +44,7 @@ function App() {
         <Route path="/products/Tablets" component={Tablet} />
         <Route path="/products/Desktops" component={Desktop} />
         <Route path="/products/Laptops" component={Laptop} />
+        <Route path="*" component={ErrorPage} />
       </Switch>
       <ToastContainer closeButton={false} position="bottom-right" />
     </div>
