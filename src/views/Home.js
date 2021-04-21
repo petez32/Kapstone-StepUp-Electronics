@@ -7,6 +7,7 @@ import Product from "../component/Product";
 
 function Home() {
   return (
+
     <div className="home">
       <Carousel id="product-carousel">
         {products.map((item) => (

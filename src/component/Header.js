@@ -12,6 +12,9 @@ import DropDown from "../component/AllProductsDropDown.js";
 function Header() {
   const user = useStore((state) => state.user)
   const [cart, setCart] = useState([])
+  const logout = ()=>{
+    window.location= "/";
+  }
   
   useEffect(()=>{
     if(user.loaded === true){
@@ -21,8 +24,6 @@ function Header() {
    .then (data => setCart(data))
 
       }
- 
-    
 
 
   },[user,cart])
@@ -32,7 +33,9 @@ function Header() {
       <img className="headerLogo" src={Logo} alt="company logo" />
       <div className="headerSearch">
         <input className="headerSearchInput" type="text" />
+       
         <SearchIcon className="headerSearchIcon" />
+       
       </div>
       <div className="headerNavbar">
         <Link to="/">
@@ -57,22 +60,18 @@ function Header() {
         <Link to="/Signup">
           <div className="headerSignup">Sign-Up</div>
         </Link>}
-        
-        <div className="headerCart">
-      
-        <Link to="/ShoppingCart">
-          <ShoppingCartIcon fontSize="large" />
-        </Link>
-      
-      
-        <span className="headerCartCount">{cart.length}</span>
-        
-        
-        
-      </div>
-        
-        
+        {user.token &&<div className="headerCart">
+      <>
+      <Link to="/ShoppingCart">
+        <ShoppingCartIcon fontSize="large" />
+      </Link>
+      <span className="headerCartCount">{cart.length}</span>
 
+    <div><Link to="/"><button onClick={logout}>Logout </button></Link></div>
+    </>
+    </div>
+ 
+        }
       </div>
     </div>
   );

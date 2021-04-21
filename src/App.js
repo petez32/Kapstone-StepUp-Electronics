@@ -18,6 +18,9 @@ import Television from "./views/Televisions";
 import Tablet from "./views/Tablets";
 import Desktop from "./views/Desktops";
 import Laptop from "./views/Laptops";
+import AddCredits from "./component/addcredits";
+
+
 import 'react-toastify/dist/ReactToastify.css';
 import { toast, ToastContainer } from "react-toastify";
 import ErrorPage from "./component/notFound"
@@ -43,8 +46,7 @@ function App() {
         <Route path="/products/Televisions" component={Television} />
         <Route path="/products/Tablets" component={Tablet} />
         <Route path="/products/Desktops" component={Desktop} />
-        <Route path="/products/Laptops" component={Laptop} />
-        <Route path="*" component={ErrorPage} />
+        <Route path="/products/Laptops" component={Laptop} />  
       </Switch>
       <ToastContainer closeButton={false} position="bottom-right" />
     </div>

@@ -1,6 +1,7 @@
 import React,{useState, useEffect} from 'react'
 import {useStore} from "../store/store"
-import {Link} from "react-router-dom"
+import {Link,Route} from "react-router-dom"
+import AddCredits from './addcredits'
 
 const MyCart = () => {
     const user = useStore((state) => state.user)
@@ -83,14 +84,22 @@ const MyCart = () => {
     if(cart.length === 0){
         return(
         <>
-        <div>Available Credit: <strong>{currentUser.credits}</strong></div>
+        <div>Available Credit: <strong>{currentUser.credits}</strong>
+          <Link to ="/ShoppingCart/addCredits">Click to Add Credits</Link>
+        </div>
          <div>You have no items in the cart</div>
+         <p></p><p></p>
+        <div>
+        <Route path="/ShoppingCart/addCredits" component={AddCredits} />
+        </div>
          </>)
     }else {
     return (
        
         <>
-         <div>Availabe Credite : <strong>{currentUser.credits}</strong> <button >add Credits</button></div>
+         <div>Availabe Credite : <strong>{currentUser.credits}</strong> 
+         <Link to = "ShoppingCart/addCredits">Click toAdd Creditd</Link>
+         </div>
         
 
         <div>
@@ -130,6 +139,10 @@ const MyCart = () => {
             
             </div>
              
+        </div>
+        <p></p><p></p>
+        <div>
+        <Route path="/ShoppingCart/addCredits" component={AddCredits} />
         </div>
         </>
     )
