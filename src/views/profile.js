@@ -4,6 +4,7 @@ import EditProfile from '../component/EditProfile'
 import {useStore} from "../store/store"
 
 const Profile = () => {
+  // call the user from the database
     const user = useStore((state) =>state.user)
     const [currentUser, setCurrentUser] = useState({})
  
