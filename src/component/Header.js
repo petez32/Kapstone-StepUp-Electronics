@@ -9,8 +9,21 @@ import { Link } from "react-router-dom";
 import DropDown from "../component/AllProductsDropDown.js";
 
 function Header() {
-  const user = useStore((state) => state.user);
-  const [cart, setCart] = useState([]);
+  const user = useStore((state) => state.user)
+  const [cart, setCart] = useState([])
+  const logout = ()=>{
+    window.location= "/";
+  }
+  
+  useEffect(()=>{
+    if(user.loaded === true){
+    
+   fetch("http://localhost:5000/cart/get/"+ user.id)
+   .then(res => res.json())
+   .then (data => setCart(data))
+
+      }
+
 
   useEffect(() => {
     if (user.loaded === true) {
@@ -25,7 +38,9 @@ function Header() {
       <img className="headerLogo" src={Logo} alt="company logo" />
       <div className="headerSearch">
         <input className="headerSearchInput" type="text" />
+       
         <SearchIcon className="headerSearchIcon" />
+       
       </div>
       <div className="headerNavbar">
         <Link to="/">
@@ -33,35 +48,32 @@ function Header() {
         </Link>
 
         <DropDown />
-        {user.token && (
-          <Link to="/Profile">
-            <div className="headerProfile">
-              {user.token && <div>{user.username}</div>}
-            </div>
-          </Link>
-        )}
-        {!user.token && (
-          <Link to="/Signin">
-            <div className="headerSignin">Sign-In</div>
-          </Link>
-        )}
-        {!user.token && (
-          <Link to="/Signup">
-            <div className="headerSignup">Sign-Up</div>
-          </Link>
-        )}
-        <div>
-          <Link to="/Profile">
-            {user.token && <div className="headerUser">{user.userName}</div>}
-          </Link>
-        </div>
-        <div className="headerCart">
-          <Link to="/ShoppingCart">
-            <ShoppingCartIcon fontSize="large" />
-          </Link>
+        <Link to="/Profile">
+          <div className="headerProfile">Profile</div>
+        </Link>
+        { !user.token &&<Link to="/Signin">
+          <div className="headerSignin">Sign-In</div>
+        </Link>
+        }
+        {user.token &&<div>
+          {user.userName}
+          </div>}
+          { !user.token &&
+        <Link to="/Signup">
+          <div className="headerSignup">Sign-Up</div>
+        </Link>}
+        {user.token &&<div className="headerCart">
+      <>
+      <Link to="/ShoppingCart">
+        <ShoppingCartIcon fontSize="large" />
+      </Link>
+      <span className="headerCartCount">{cart.length}</span>
 
-          <span className="headerCartCount">{cart.length}</span>
-        </div>
+    <div><Link to="/"><button onClick={logout}>Logout </button></Link></div>
+    </>
+    </div>
+ 
+        }
       </div>
     </div>
   );

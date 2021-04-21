@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
-import { useStore } from "../store/store";
-import { Link } from "react-router-dom";
-import "../asset/ShoppingCart.css";
+import React,{useState, useEffect} from 'react'
+import {useStore} from "../store/store"
+import {Link,Route} from "react-router-dom"
+import AddCredits from './addcredits'
 
 const MyCart = () => {
   const user = useStore((state) => state.user);
@@ -136,11 +136,15 @@ const MyCart = () => {
                 {/* {!checkedOut && <Link  to ="/ShoppingCart" ><button onClick= {CheckOut} id = {user.id}>Click To CheckOut</button></Link> } */}
               </div>
             </div>
-          </div>
-        </center>
-      </div>
-    );
-  }
-};
+             
+        </div>
+        <p></p><p></p>
+        <div>
+        <Route path="/ShoppingCart/addCredits" component={AddCredits} />
+        </div>
+        </>
+    )
+        }
+}
 
 export default MyCart;
