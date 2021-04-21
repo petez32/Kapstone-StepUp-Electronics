@@ -1,7 +1,7 @@
-import React,{useState, useEffect} from 'react'
-import {useStore} from "../store/store"
-import {Link,Route} from "react-router-dom"
-import AddCredits from './addcredits'
+import React, { useState, useEffect } from "react";
+import { useStore } from "../store/store";
+import { Link, Route } from "react-router-dom";
+import AddCredits from "./addcredits";
 
 const MyCart = () => {
   const user = useStore((state) => state.user);
@@ -60,10 +60,7 @@ const MyCart = () => {
         .then((data) => setCurrentUser(data));
     }
   }, [user, cart]);
-  // useEffect(()=>{
-  //     DeleteItemFromCart()
 
-  // },[cart])
   if (cart.length === 0) {
     return (
       <div className="availiableBackground">
@@ -135,16 +132,15 @@ const MyCart = () => {
 
                 {/* {!checkedOut && <Link  to ="/ShoppingCart" ><button onClick= {CheckOut} id = {user.id}>Click To CheckOut</button></Link> } */}
               </div>
+              {/* <p></p><p></p> */}
+              {/* <div> */}
+              <Route path="/ShoppingCart/addCredits" component={AddCredits} />
             </div>
-             
-        </div>
-        <p></p><p></p>
-        <div>
-        <Route path="/ShoppingCart/addCredits" component={AddCredits} />
-        </div>
-        </>
-    )
-        }
-}
+          </div>
+        </center>
+      </div>
+    );
+  }
+};
 
 export default MyCart;

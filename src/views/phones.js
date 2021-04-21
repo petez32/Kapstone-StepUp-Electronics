@@ -21,14 +21,6 @@ function CellPhone() {
     addToCart(userId, productName, price, productDetail).then((res) =>
       console.log(res)
     );
-
-    const productName = item.productName;
-    const price = item.price;
-    const productDetail = item.productDetail;
-    const userId = user.id;
-    addToCart(userId, productName, price, productDetail).then((res) =>
-      console.log(res)
-    );
   };
 
   useEffect(() => {
