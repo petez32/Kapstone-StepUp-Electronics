@@ -1,5 +1,6 @@
+import { toast } from "react-toastify";
 export const All_Products = () => {
-  return fetch("http://localhost:5000/products").then((response) => response.json());
+return fetch("http://localhost:5000/products").then((response) => response.json());
 };
 
 export const signInRequest = (userName, password)=>{
@@ -10,7 +11,13 @@ return fetch( "http://localhost:5000/login",{
             userName,
             password
         }),
-    }).then((response) => response.json())
+    }).then((response) =>{
+        if(response.error){
+            toast.error('error')
+        }else{
+            toast.success('successful')
+        }
+        return  response.json()})
 };
 // signup user
 export const signUpRequest = (userName, password,email,firstName,lastName)=>{
@@ -35,8 +42,7 @@ export const signUpRequest = (userName, password,email,firstName,lastName)=>{
                 userId,
                 productName,
                 price,
-                productDetail
-       
+                productDetail     
             }),
         }).then((response) => response.json())
         
