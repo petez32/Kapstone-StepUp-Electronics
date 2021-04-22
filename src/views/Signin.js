@@ -46,15 +46,17 @@ function Signin() {
           variant="filled"
           type="password"
         />
-        <Link to="/">
-          <Button onClick={handleSubmit} variant="contained" color="primary">
-            Submit
-          </Button>
-        </Link>
+        <center>
+          <Link to="/">
+            <Button onClick={handleSubmit} variant="contained" color="primary">
+              Submit
+            </Button>
+          </Link>
+        </center>
         <span>
           {" "}
           <center>
-            Not a member <Link to="/signup">Sign Up</Link> for X amount of
+            Not a member <Link to="/signup">Sign Up</Link> and recieve 50 bonus
             credits.
           </center>
         </span>

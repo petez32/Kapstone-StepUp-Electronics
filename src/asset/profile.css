@@ -1,0 +1,52 @@
+.profileBackground {
+  max-height: 100%;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightgray;
+}
+
+.profileContainer {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  height: 70vh;
+  margin: auto;
+  border: 1px solid darkgray;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.profileHeader {
+  margin-top: 35px;
+}
+
+.profileName {
+  margin-top: 34px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.profileUsername {
+  margin-top: 14px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.profileEmail {
+  margin-top: 14px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.profileEditViewLink {
+  margin-top: 34px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+a {
+  font-weight: 500 !important;
+  color: rgb(122, 167, 184) !important;
+}

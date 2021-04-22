@@ -73,9 +73,9 @@ const MyCart = () => {
             <div className="availableCredit">
               Available Credit: <strong>{currentUser.credits}</strong>
             </div>
-            <div className="addCreditLink">
+            {/* <div className="addCreditLink">
               <Link to="/ShoppingCart/addCredits">Click to Add Credits</Link>
-            </div>
+            </div> */}
             <div className="noItems">You have no items in the cart</div>
             <Route path="/ShoppingCart/addCredits" component={AddCredits} />
           </div>
@@ -87,26 +87,25 @@ const MyCart = () => {
       <div className="cartBackground">
         <center>
           <div className="shoppingCartContainer">
-            <h5 className="cartCredits">Available Credits:</h5>{" "}
+            <h4 className="cartCredits">Available Credits:</h4>{" "}
             <strong>{currentUser.credits}</strong>{" "}
-            <div className="clickAddCreditsLink">
+            <div className="clickAddCreditsButton">
               <Link
                 to="ShoppingCart/addCredits"
-                className="clickAddCreditsLink"
+                className="clickAddCreditsButton"
               >
-                Click To Add Credits
+                Click Here To Add Credits
               </Link>
             </div>
             {/* swapped button for link */}
-          </div>
-
-          <div>
-            <table>
+            <div className="tdContainers">
               <tr>
-                {" "}
-                <td>Product Name</td>
-                <td> Price</td>
-                <td></td>
+                <td>
+                  <h4> Product Name</h4>
+                </td>
+                <td>
+                  <h4>Price</h4>
+                </td>
               </tr>
               {cart &&
                 cart.map((item) => {
@@ -116,9 +115,13 @@ const MyCart = () => {
                   return (
                     <tr>
                       <td>{item.productName}</td>
-                      <td>{item.price}</td>
+                      <td>{item.price} Credits</td>
                       <td>
-                        <button onClick={DeleteItemFromCart} id={item._id}>
+                        <button
+                          className="cartDeleteButton"
+                          onClick={DeleteItemFromCart}
+                          id={item._id}
+                        >
                           Delete
                         </button>
                       </td>
@@ -130,24 +133,26 @@ const MyCart = () => {
                   <strong>Total</strong>
                 </td>
                 <td>
-                  <strong>{sum}</strong>{" "}
+                  <strong>{sum} Credits</strong>{" "}
                 </td>
               </tr>
-            </table>
-            <div>
+
+              {/* <div> */}
               <Link to="/cart/checkout">
-                <button onClick={CheckOut} id={user.id}>
+                <button
+                  className="checkoutButton"
+                  onClick={CheckOut}
+                  id={user.id}
+                >
                   Click To CheckOut
                 </button>
               </Link>
 
               {/* {!checkedOut && <Link  to ="/ShoppingCart" ><button onClick= {CheckOut} id = {user.id}>Click To CheckOut</button></Link> } */}
             </div>
-          </div>
-          <p></p>
-          <p></p>
-          <div>
-            <Route path="/ShoppingCart/addCredits" component={AddCredits} />
+            <div>
+              <Route path="/ShoppingCart/addCredits" component={AddCredits} />
+            </div>
           </div>
         </center>
       </div>
