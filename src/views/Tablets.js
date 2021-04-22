@@ -30,14 +30,14 @@ function Tablet() {
   useEffect(() => {
     
 
-    const TabletsCategory = products.filter((products) => {
+    const TabletsCategory = products && products.filter((products) => {
       return products.category === "tablet";
     });
     setTablets(TabletsCategory);
   }, [products]);
   return (
     <div>
-      {tablets.map((item) => (
+      {tablets &&tablets.map((item) => (
         <div>
           <img src={item.imageUrl} alt="" />
           <>
