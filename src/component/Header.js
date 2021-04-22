@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "../asset/Header.css";
 import Logo from "../asset/StepUp_Electronics.png";
-import SearchIcon from "@material-ui/icons/Search";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
-import Signin from "../component/Signin";
 import { useStore } from "../store/store";
 import { Link } from "react-router-dom";
 import DropDown from "../component/AllProductsDropDown.js";

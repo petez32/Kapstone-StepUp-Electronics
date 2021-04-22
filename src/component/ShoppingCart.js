@@ -109,9 +109,7 @@ const MyCart = () => {
               </tr>
               {cart &&
                 cart.map((item) => {
-                  {
                     sum = sum + item.price;
-                  }
                   return (
                     <tr>
                       <td>{item.productName}</td>

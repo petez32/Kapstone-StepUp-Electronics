@@ -28,33 +28,6 @@ function Tablet() {
   }, []);
 
   useEffect(() => {
-<<<<<<< HEAD
-    
-
-    const TabletsCategory = products && products.filter((products) => {
-      return products.category === "tablet";
-    });
-    setTablets(TabletsCategory);
-  }, [products]);
-  return (
-    <div>
-      {tablets &&tablets.map((item) => (
-        <div>
-          <img src={item.imageUrl} alt="" />
-          <>
-            <h1> {item.productName} </h1>
-            <p> {item.productDetail} </p>
-            <p> {item.price} </p>
-            {user.token &&
-            <div> <button
-            onClick = {addItemToCart}
-            id = {item._id}
-              >Add To Cart</button></div>
-             }
-          </>
-        </div>
-      ))}
-=======
     const tabletsCategory =
       products &&
       products.filter((products) => {
@@ -89,7 +62,6 @@ function Tablet() {
             </div>
           ))}
       </div>
->>>>>>> main
     </div>
   );
 }
