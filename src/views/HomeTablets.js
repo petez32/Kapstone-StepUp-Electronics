@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 import { All_Products, addToCart } from "../FetchRequests";
 import { useStore } from "../store/store";
-import "../asset/Televisions.css";
+import "../asset/HomeTablets.css";
 
-function Television() {
+function Tablet() {
   const [products, setProducts] = useState([]);
-  const [televisions, setTelevisions] = useState([]);
+  const [tablets, setTablets] = useState([]);
   const user = useStore((state) => state.user);
   const addItemToCart = (event) => {
     const productId = event.target.id;
@@ -28,18 +28,18 @@ function Television() {
   }, []);
 
   useEffect(() => {
-    const televisionCategory =
+    const tabletsCategory =
       products &&
       products.filter((products) => {
-        return products.category === "televission";
+        return products.category === "tablet";
       });
-    setTelevisions(televisionCategory);
+    setTablets(tabletsCategory);
   }, [products]);
   return (
-    <div className="allTelevisionsContainer">
-      <div className="individualTelevisionContainers">
-        {televisions &&
-          televisions.map((item) => (
+    <div className="allContainerHome">
+      <div className="individualTabletContainers">
+        {tablets &&
+          tablets.slice(0, 4).map((item) => (
             <div className="individualProduct">
               <center>
                 <img className="productImage" src={item.imageUrl} alt="" />
@@ -66,4 +66,4 @@ function Television() {
   );
 }
 
-export default Television;
+export default Tablet;

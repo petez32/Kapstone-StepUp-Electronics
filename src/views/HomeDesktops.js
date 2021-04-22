@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 import { All_Products, addToCart } from "../FetchRequests";
 import { useStore } from "../store/store";
-import "../asset/Televisions.css";
+import "../asset/HomeDesktops.css";
 
-function Television() {
+function Desktop() {
   const [products, setProducts] = useState([]);
-  const [televisions, setTelevisions] = useState([]);
+  const [desktops, setDesktops] = useState([]);
   const user = useStore((state) => state.user);
   const addItemToCart = (event) => {
     const productId = event.target.id;
@@ -28,24 +28,24 @@ function Television() {
   }, []);
 
   useEffect(() => {
-    const televisionCategory =
+    const desktopsCategory =
       products &&
       products.filter((products) => {
-        return products.category === "televission";
+        return products.category === "desktop";
       });
-    setTelevisions(televisionCategory);
+    setDesktops(desktopsCategory);
   }, [products]);
   return (
-    <div className="allTelevisionsContainer">
-      <div className="individualTelevisionContainers">
-        {televisions &&
-          televisions.map((item) => (
-            <div className="individualProduct">
+    <div className="allContainer">
+      <div className="individualContainers">
+        {desktops &&
+          desktops.slice(0, 4).map((item) => (
+            <div id="individualProduct">
               <center>
                 <img className="productImage" src={item.imageUrl} alt="" />
                 <h4 className="productHeader"> {item.productName} </h4>
                 <p className="productParagraph"> {item.productDetail} </p>
-                <h5 className="productPrice"> {item.price} </h5>
+                <h5 className="productPrice"> {item.price} credits</h5>
                 {user.token && (
                   <div>
                     {" "}
@@ -66,4 +66,4 @@ function Television() {
   );
 }
 
-export default Television;
+export default Desktop;
