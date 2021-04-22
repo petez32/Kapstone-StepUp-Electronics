@@ -1,0 +1,28 @@
+.addCreditsHeader {
+  margin-top: 20px;
+}
+
+.creditAmount {
+}
+
+.ccNumber {
+  margin-right: 28px;
+}
+
+.expirationDate {
+  margin-right: 2px;
+}
+
+.securityCode {
+  margin-left: 6px;
+}
+
+.addCreditsButton {
+  margin-top: 5px;
+  width: 20%;
+  background-color: rgb(122, 167, 184);
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  margin-left: 5px;
+}
