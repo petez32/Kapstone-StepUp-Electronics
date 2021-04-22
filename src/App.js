@@ -1,10 +1,9 @@
-import logo from "./logo.svg";
+
 import "./App.css";
 import Home from "./views/Home";
 import Signin from "./views/Signin";
 import Signup from "./views/Signup";
 import Profile from "./views/profile";
-import { useStore } from "./store/store";
 import AllProducts from "./views/AllProducts";
 import { Switch, Route } from "react-router-dom";
 import Header from "./component/Header.js";
@@ -12,15 +11,11 @@ import MyCart from "./component/ShoppingCart";
 import CheckOut from "./component/CheckOut";
 import Order from "./component/Order";
 import "./asset/home.css";
-import { ShoppingCart } from "@material-ui/icons";
 import CellPhone from "./views/phones";
 import Television from "./views/Televisions";
 import Tablet from "./views/Tablets";
 import Desktop from "./views/Desktops";
 import Laptop from "./views/Laptops";
-import AddCredits from "./component/addcredits";
-
-
 import 'react-toastify/dist/ReactToastify.css';
 import { toast, ToastContainer } from "react-toastify";
 import ErrorPage from "./component/notFound"

@@ -64,7 +64,7 @@ const EditProfile = () => {
         email: userInput.userName,
       });
     }
-  }, [userInput, user]);
+  }, [userInput, user, submitted]);
 
   return (
     <>
