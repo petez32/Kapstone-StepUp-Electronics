@@ -1,0 +1,35 @@
+.editProfile {
+  margin-top: 50px;
+}
+
+.editProfileHeader {
+  margin-top: 40px;
+  margin-left: 40%;
+}
+
+.editFirstName {
+  margin-top: 20px;
+  margin-left: 28%;
+}
+
+.editLastName {
+  margin-top: 20px;
+  margin-left: 29%;
+}
+
+.editEmail {
+  margin-top: 20px;
+  margin-left: 34.75%;
+}
+
+.submitButtonChange {
+  margin-top: 25px;
+
+  margin-left: 40%;
+
+  width: 100px;
+  color: white;
+  background-color: rgb(122, 167, 184);
+  font-weight: 500;
+  border-radius: 2px;
+}

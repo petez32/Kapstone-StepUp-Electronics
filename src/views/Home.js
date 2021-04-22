@@ -2,12 +2,14 @@ import React from "react";
 import "../asset/home.css";
 import { Carousel } from "react-bootstrap";
 import { products } from "../products.json";
-import Product from "../component/Product";
-
+import Desktops from "../views/HomeDesktops.js";
+import Laptops from "../views/HomeLaptops";
+import Tablets from "../views/HomeTablets";
+import Televisions from "../views/HomeTelevisions";
+import Phones from "../views/HomePhones";
 
 function Home() {
   return (
-
     <div className="home">
       <Carousel id="product-carousel">
         {products.map((item) => (
@@ -26,50 +28,35 @@ function Home() {
           <h1>DESKTOP COMPUTERS</h1>
         </div>
         <div className="headerRow1">
-          <Product />
-          <Product />
-          <Product />
-          <Product />
+          <Desktops />
         </div>
 
         <div className="homeCategoryRow2">
           <h1>LAPTOPS</h1>
         </div>
         <div className="headerRow2">
-          <Product />
-          <Product />
-          <Product />
-          <Product />
+          <Laptops />
         </div>
 
         <div className="homeCategoryRow3">
           <h1>TABLETS</h1>
         </div>
         <div className="headerRow3">
-          <Product />
-          <Product />
-          <Product />
-          <Product />
+          <Tablets />
         </div>
 
         <div className="homeCategoryRow4">
           <h1>TELEVISIONS</h1>
         </div>
         <div className="headerRow4">
-          <Product />
-          <Product />
-          <Product />
-          <Product />
+          <Televisions />
         </div>
 
         <div className="homeCategoryRow5">
           <h1>CELL PHONES</h1>
         </div>
         <div className="headerRow5">
-          <Product />
-          <Product />
-          <Product />
-          <Product />
+          <Phones />
         </div>
       </div>
     </div>

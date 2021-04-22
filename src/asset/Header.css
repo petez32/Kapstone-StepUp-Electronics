@@ -1,78 +1,82 @@
 .header {
   position: sticky;
-  height: 90px;
+  height: 10vh;
   display: flex;
   align-items: center;
   background-color: white;
-  top: 0px;
-  z-index: 100;
+  z-index: 1;
 }
 .headerLogo {
   width: 200px;
   object-fit: contain;
-  margin-left: 20px;
+  margin-left: 60px;
   margin-top: 10px;
 }
-.headerSearch {
-  justify-content: flex-end;
-  display: flex;
-  flex: 1;
+
+.logoutButton {
+  width: 100px;
+  color: white;
+  background-color: rgb(122, 167, 184);
+  font-weight: 500;
+  border-radius: 5px;
 }
-.headerSearchInput {
-  margin-left: 10px;
-  height: 30px;
-  padding: 4px;
-  width: 65%;
-}
-.headerSearchIcon {
-  padding: 4px;
-  width: 40px !important;
-  height: 36px !important;
-  background-color: rgb(122, 167, 184) !important;
-  margin-top: -3px;
-}
+
 .headerNavbar {
   display: flex;
-  justify-content: space-evenly;
-  margin-left: 20px;
+  /* justify-content: center;
+  align-content: center;*/
+  justify-items: center;
+  /* align-items: center; */
+  margin-left: 26%;
 }
 .headerHome {
   display: flex;
   flex-direction: column;
   margin-left: 10px;
-  margin-right: 10px;
+  margin-right: 20px;
   font-size: 18px;
   font-weight: 750;
-  color: black;
+  color: rgb(12, 7, 83);
 }
 
 .headerProfile {
   display: flex;
   flex-direction: column;
   margin-left: 10px;
-  margin-right: 10px;
+  margin-right: 20px;
   font-size: 18px;
   font-weight: 750;
-  color: black;
+  color: rgb(12, 7, 83);
 }
 .headerSignin {
   display: flex;
   flex-direction: column;
   margin-left: 10px;
-  margin-right: 10px;
+  margin-right: 20px;
   font-size: 18px;
   font-weight: 750;
-  color: black;
+  color: rgb(12, 7, 83);
 }
 .headerSignup {
   display: flex;
   flex-direction: column;
   margin-left: 10px;
-  margin-right: 15px;
+  margin-right: 25px;
   font-size: 18px;
   font-weight: 750;
-  color: black;
+  color: rgb(12, 7, 83);
 }
+
+.headerUser {
+  font-weight: 650;
+  margin-left: 15px;
+  margin-right: 35px;
+  margin-top: -1.6px;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: rgb(12, 7, 83) !important;
+}
+
 .headerCart {
   display: flex;
   align-items: center;
@@ -80,7 +84,7 @@
 }
 
 .MuiSvgIcon-root {
-  color: black !important;
+  color: rgb(12, 7, 83) !important;
 }
 
 .headerCartCount {

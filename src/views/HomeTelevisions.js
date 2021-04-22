@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { All_Products, addToCart } from "../FetchRequests";
 import { useStore } from "../store/store";
-import "../asset/Televisions.css";
+import "../asset/HomeTelevisions.css";
 
 function Television() {
   const [products, setProducts] = useState([]);
@@ -36,10 +36,10 @@ function Television() {
     setTelevisions(televisionCategory);
   }, [products]);
   return (
-    <div className="allTelevisionsContainer">
+    <div className="allContainerHome">
       <div className="individualTelevisionContainers">
         {televisions &&
-          televisions.map((item) => (
+          televisions.slice(0, 4).map((item) => (
             <div className="individualProduct">
               <center>
                 <img className="productImage" src={item.imageUrl} alt="" />

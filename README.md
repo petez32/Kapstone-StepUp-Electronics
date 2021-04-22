@@ -164,3 +164,7 @@ Once Signed-in How will user navigate?
     Things we Want To Do:
         -Back button
         -System Admins: Can delete Items, and Add Items -->
+
+Credits: material-ui for components, Cedrick took idea of toast from his Kwitter Group Project.
+
+Authors:Pete Zamora, Tucker Serwadda,Cedrick Randolph,Nick Dummett,and Zach Baxter.

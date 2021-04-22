@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 import { All_Products, addToCart } from "../FetchRequests";
 import { useStore } from "../store/store";
-import "../asset/Televisions.css";
+import "../asset/HomePhones.css";
 
-function Television() {
+function CellPhone() {
   const [products, setProducts] = useState([]);
-  const [televisions, setTelevisions] = useState([]);
+  const [phones, setPhones] = useState([]);
   const user = useStore((state) => state.user);
   const addItemToCart = (event) => {
     const productId = event.target.id;
@@ -28,18 +28,18 @@ function Television() {
   }, []);
 
   useEffect(() => {
-    const televisionCategory =
+    const phonesCategory =
       products &&
       products.filter((products) => {
-        return products.category === "televission";
+        return products.category === "phone";
       });
-    setTelevisions(televisionCategory);
+    setPhones(phonesCategory);
   }, [products]);
   return (
-    <div className="allTelevisionsContainer">
-      <div className="individualTelevisionContainers">
-        {televisions &&
-          televisions.map((item) => (
+    <div className="allContainerHome">
+      <div className="individualPhoneContainers">
+        {phones &&
+          phones.slice(0, 4).map((item) => (
             <div className="individualProduct">
               <center>
                 <img className="productImage" src={item.imageUrl} alt="" />
@@ -66,4 +66,4 @@ function Television() {
   );
 }
 
-export default Television;
+export default CellPhone;
