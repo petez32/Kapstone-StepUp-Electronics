@@ -36,7 +36,7 @@ function CellPhone() {
     setPhones(phonesCategory);
   }, [products]);
   return (
-    <div className="allContainer">
+    <div className="allContainerHome">
       <div className="individualPhoneContainers">
         {phones &&
           phones.slice(0, 4).map((item) => (

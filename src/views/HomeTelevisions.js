@@ -36,7 +36,7 @@ function Television() {
     setTelevisions(televisionCategory);
   }, [products]);
   return (
-    <div className="allContainer">
+    <div className="allContainerHome">
       <div className="individualTelevisionContainers">
         {televisions &&
           televisions.slice(0, 4).map((item) => (

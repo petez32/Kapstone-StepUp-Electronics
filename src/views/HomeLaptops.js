@@ -36,7 +36,7 @@ function Laptop() {
     setLaptops(laptopsCategory);
   }, [products]);
   return (
-    <div className="allContainer">
+    <div className="allContainerHome">
       <div className="individualLaptopContainers">
         {laptops &&
           laptops.slice(0, 4).map((item) => (

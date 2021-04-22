@@ -37,10 +37,10 @@ function Desktop() {
   }, [products]);
   return (
     <div className="allContainer">
-      <div className="individualDesktopContainers">
+      <div className="individualContainers">
         {desktops &&
           desktops.slice(0, 4).map((item) => (
-            <div className="individualProduct">
+            <div id="individualProduct">
               <center>
                 <img className="productImage" src={item.imageUrl} alt="" />
                 <h4 className="productHeader"> {item.productName} </h4>

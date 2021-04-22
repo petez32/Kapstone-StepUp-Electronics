@@ -36,7 +36,7 @@ function Tablet() {
     setTablets(tabletsCategory);
   }, [products]);
   return (
-    <div className="allContainer">
+    <div className="allContainerHome">
       <div className="individualTabletContainers">
         {tablets &&
           tablets.slice(0, 4).map((item) => (
