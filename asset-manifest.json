@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/Kapstone-StepUp-Electronics/static/css/main.bd203092.chunk.css",
-    "main.js": "/Kapstone-StepUp-Electronics/static/js/main.1bc6e7c9.chunk.js",
-    "main.js.map": "/Kapstone-StepUp-Electronics/static/js/main.1bc6e7c9.chunk.js.map",
+    "main.css": "/Kapstone-StepUp-Electronics/static/css/main.c383826c.chunk.css",
+    "main.js": "/Kapstone-StepUp-Electronics/static/js/main.f11fcb6c.chunk.js",
+    "main.js.map": "/Kapstone-StepUp-Electronics/static/js/main.f11fcb6c.chunk.js.map",
     "runtime-main.js": "/Kapstone-StepUp-Electronics/static/js/runtime-main.bb9d7113.js",
     "runtime-main.js.map": "/Kapstone-StepUp-Electronics/static/js/runtime-main.bb9d7113.js.map",
     "static/css/2.94b695ff.chunk.css": "/Kapstone-StepUp-Electronics/static/css/2.94b695ff.chunk.css",
@@ -12,7 +12,7 @@
     "static/js/3.4cb18679.chunk.js.map": "/Kapstone-StepUp-Electronics/static/js/3.4cb18679.chunk.js.map",
     "index.html": "/Kapstone-StepUp-Electronics/index.html",
     "static/css/2.94b695ff.chunk.css.map": "/Kapstone-StepUp-Electronics/static/css/2.94b695ff.chunk.css.map",
-    "static/css/main.bd203092.chunk.css.map": "/Kapstone-StepUp-Electronics/static/css/main.bd203092.chunk.css.map",
+    "static/css/main.c383826c.chunk.css.map": "/Kapstone-StepUp-Electronics/static/css/main.c383826c.chunk.css.map",
     "static/js/2.cfe2e62a.chunk.js.LICENSE.txt": "/Kapstone-StepUp-Electronics/static/js/2.cfe2e62a.chunk.js.LICENSE.txt",
     "static/media/StepUp_Electronics.52dbcf94.png": "/Kapstone-StepUp-Electronics/static/media/StepUp_Electronics.52dbcf94.png"
   },
@@ -20,7 +20,7 @@
     "static/js/runtime-main.bb9d7113.js",
     "static/css/2.94b695ff.chunk.css",
     "static/js/2.cfe2e62a.chunk.js",
-    "static/css/main.bd203092.chunk.css",
-    "static/js/main.1bc6e7c9.chunk.js"
+    "static/css/main.c383826c.chunk.css",
+    "static/js/main.f11fcb6c.chunk.js"
   ]
 }
