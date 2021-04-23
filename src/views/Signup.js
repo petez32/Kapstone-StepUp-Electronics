@@ -3,11 +3,9 @@ import React, { useState } from "react";
 import { TextField, Button } from "@material-ui/core";
 import { Link, useHistory } from "react-router-dom";
 import { signUpRequest } from "../FetchRequests";
-import { useStore, actions } from "../store/store";
 import { toast } from "react-toastify";
 
 function Signup() {
-  const dispatch = useStore((state) => state.dispatch);
   const history = useHistory();
   const [userInput, setUserInput] = useState({
     username: "",
