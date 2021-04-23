@@ -7,7 +7,7 @@ const Order = () => {
   const [cart, setCart] = useState([]);
   useEffect(() => {
     if (user.loaded === true) {
-      fetch("http://localhost:5000/order/" + user.id)
+      fetch("https://step-up-electronics.glitch.me/order/" + user.id)
         .then((res) => res.json())
         .then((data) => setCart(data));
     }

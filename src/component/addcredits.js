@@ -15,7 +15,7 @@ const AddCredits = () => {
     }
   };
   const handleSubmit = () => {
-    fetch("http://localhost:5000/updateCredits/" + user.id, {
+    fetch("https://step-up-electronics.glitch.me/updateCredits/" + user.id, {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

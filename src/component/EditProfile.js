@@ -32,7 +32,7 @@ const EditProfile = () => {
     }
 
     setSubmitted(true);
-    fetch("http://localhost:5000/update/user/" + user.id, {
+    fetch("https://step-up-electronics.glitch.me/update/user/" + user.id, {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -47,7 +47,7 @@ const EditProfile = () => {
   };
   useEffect(() => {
     if (user.loaded === true) {
-      fetch("http://localhost:5000/user/" + user.id, {
+      fetch("https://step-up-electronics.glitch.me/user/" + user.id, {
         method: "GET",
         headers: { "Content-Type": "application/json" },
       })

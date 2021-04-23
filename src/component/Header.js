@@ -15,7 +15,7 @@ function Header() {
 
   useEffect(() => {
     if (user.loaded === true) {
-      fetch("http://localhost:5000/cart/get/" + user.id)
+      fetch("https://step-up-electronics.glitch.me/cart/get/" + user.id)
         .then((res) => res.json())
         .then((data) => setCart(data));
     }

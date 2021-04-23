@@ -15,7 +15,7 @@ const MyCart = () => {
   // delete from cart
   const DeleteItemFromCart = (event) => {
     const id = event.target.id;
-    fetch("http://localhost:5000/cart/delete/" + id, {
+    fetch("https://step-up-electronics.glitch.me/cart/delete/" + id, {
       method: "DELETE",
       headers: { "Content-Type": "application/json" },
     })
@@ -31,7 +31,7 @@ const MyCart = () => {
       return false;
     } else {
       const userId = event.target.id;
-      fetch("http://localhost:5000/cart/checkout/" + userId, {
+      fetch("https://step-up-electronics.glitch.me/cart/checkout/" + userId, {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
       })
@@ -39,7 +39,7 @@ const MyCart = () => {
         .then((res) => console.log(res));
       const balance = currentUser.credits - sum;
       // update credit
-      fetch("http://localhost:5000/updateCredits/" + userId, {
+      fetch("https://step-up-electronics.glitch.me/updateCredits/" + userId, {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -53,10 +53,10 @@ const MyCart = () => {
 
   useEffect(() => {
     if (user.loaded === true) {
-      fetch("http://localhost:5000/cart/get/" + user.id)
+      fetch("https://step-up-electronics.glitch.me/cart/get/" + user.id)
         .then((res) => res.json())
         .then((data) => setCart(data));
-      fetch("http://localhost:5000/user/" + user.id)
+      fetch("https://step-up-electronics.glitch.me/user/" + user.id)
         .then((res) => res.json())
         .then((data) => setCurrentUser(data));
     }
@@ -109,7 +109,7 @@ const MyCart = () => {
               </tr>
               {cart &&
                 cart.map((item) => {
-                    sum = sum + item.price;
+                  sum = sum + item.price;
                   return (
                     <tr>
                       <td>{item.productName}</td>
